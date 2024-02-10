@@ -5,6 +5,7 @@
 
 .nav__list-item {
   margin-left: 1.5em;
+  font-size: var(--fs-nav-item);
 }
 
 .app .nav__hamburger {

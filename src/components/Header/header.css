@@ -1,9 +1,13 @@
 .header {
   height: 8em;
   max-width: 1024px;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   justify-content: space-between;
+}
+
+.logo {
+  font-size: var(--fs-logo);
 }
 
 @media (max-width: 600px) {

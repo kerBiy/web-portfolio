@@ -6,16 +6,6 @@ const App = () => {
     <>
       <div id="top" className="app">
         <Header />
-
-        {/* <main>
-          <About />
-          <Projects />
-          <Skills />
-          <Contact />
-        </main>
-
-        <ScrollToTop />
-        <Footer /> */}
       </div>
     </>
   );

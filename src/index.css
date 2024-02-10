@@ -17,6 +17,9 @@
   --small-gap: 1rem;
   --normal-gap: 1.25rem;
   --big-gap: 2rem;
+
+  --fs-nav-item: 1.125rem;
+  --fs-logo: 1.875rem;
 }
 
 *,
@@ -104,6 +107,9 @@ button:hover {
 }
 
 @media (max-width: 900px) {
+  :root {
+    --fs-logo: 1.5rem;
+  }
   h1 {
     font-size: 2.6rem;
   }
