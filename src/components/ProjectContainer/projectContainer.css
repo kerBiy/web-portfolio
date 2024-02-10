@@ -5,6 +5,7 @@
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
+  z-index: inherit;
 }
 
 .project:hover {

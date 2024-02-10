@@ -1,8 +1,41 @@
+.light {
+  --clr-bg: radial-gradient(
+    circle,
+    #ffffff,
+    #f8f8f9,
+    #f0f1f3,
+    #e7eaed,
+    #dee4e7
+  );
+  --clr-bg-alt: #fcfcfc;
+  --clr-fg: #555;
+  --clr-fg-alt: #444;
+  --clr-primary: #516dd3;
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.dark {
+  --clr-bg: radial-gradient(
+    circle,
+    #23283e,
+    #252a41,
+    #262c45,
+    #282d48,
+    #2a2f4c
+  );
+  --clr-bg-alt: #2a2f4c;
+  --clr-fg: #bdbddd;
+  --clr-fg-alt: #cdcdff;
+  --clr-primary: #90a0d9;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
 .app {
   font-family: var(--ff-primary);
   line-height: 1.5;
   color: var(--clr-fg);
-  background-color: var(--clr-bg);
+  background: var(--clr-bg);
 }
 
 .section {
@@ -77,7 +110,7 @@
 
 .btn--outline:hover,
 .btn--outline:focus {
-  color: var(--clr-bg);
+  color: var(--clr-bg-alt);
 }
 
 .btn--outline:before {

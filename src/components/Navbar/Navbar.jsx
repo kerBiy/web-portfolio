@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Brightness2Icon from "@mui/icons-material/Brightness2";
 import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { ThemeContext } from "../../themes";
 import { projects, skills, contact } from "../../data";
 import "./navbar.css";
 
 const Navbar = () => {
+  const [{ themeName, toggleTheme }] = useContext(ThemeContext);
   const [showNavList, setShowNavList] = useState(false);
-  const themeName = "dark";
 
   const toggleNavList = () => setShowNavList(!showNavList);
 
@@ -48,6 +49,7 @@ const Navbar = () => {
               href="#contact"
               onClick={toggleNavList}
               className="link link--nav"
+              aria-label="toggle theme"
             >
               Contact
             </a>
@@ -55,7 +57,11 @@ const Navbar = () => {
         ) : null}
       </ul>
 
-      <button type="button" className="btn btn--icon nav__theme">
+      <button
+        type="button"
+        onClick={toggleTheme}
+        className="btn btn--icon nav__theme"
+      >
         {themeName === "dark" ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
       </button>
 
