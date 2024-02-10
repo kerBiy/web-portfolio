@@ -1,10 +1,10 @@
 .projects {
-  padding-top: 3em;
+  padding-block: 5em;
 
-  /* background-color: var(--clr-bg-alt);
+  background-color: var(--clr-bg-alt);
 
   box-shadow: 0 0 0 100vmax var(--clr-bg-alt);
-  clip-path: inset(0 -100vmax); */
+  clip-path: inset(0 -100vmax);
 }
 
 .projects__grid {
