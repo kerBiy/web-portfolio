@@ -6,7 +6,7 @@
 }
 
 main {
-  max-width: 1100px;
+  max-width: 1024px;
   width: 90%;
   margin: 0 auto;
 }
@@ -34,7 +34,6 @@ main {
 
 .link:hover {
   color: var(--clr-primary);
-  cursor: pointer;
 }
 
 .link::before {
@@ -56,7 +55,7 @@ main {
 .link--nav {
   color: var(--clr-fg);
   text-transform: lowercase;
-  font-weight: 500;
+  font-weight: var(--fw-semi-bold);
 }
 
 .link--icon {
@@ -65,10 +64,9 @@ main {
 
 .btn {
   display: block;
-  cursor: pointer;
   padding: 0.8em 1.4em;
-  font-weight: 500;
-  font-size: 0.9rem;
+  font-weight: var(--fw-semi-bold);
+  font-size: 1rem;
   text-transform: lowercase;
   transition: transform 0.2s ease-in-out;
 }

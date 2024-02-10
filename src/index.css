@@ -25,6 +25,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: inherit;
 }
 
 html {
@@ -92,8 +93,14 @@ a {
 }
 
 button {
-  cursor: pointer;
+  color: inherit;
   outline: 0;
+  border: 0;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
