@@ -1,24 +1,15 @@
 .about {
   flex-direction: column;
-  margin-top: 3em;
+  gap: 2.4em;
 }
 
 .about__name {
   color: var(--clr-primary);
 }
 
-.about__role {
-  margin-top: 1.2em;
-}
-
 .about__desc {
-  font-size: 1rem;
+  font-size: var(--fs-regular);
   max-width: 600px;
-}
-
-.about__desc,
-.about__contact {
-  margin-top: 2.4em;
 }
 
 .about .link--icon {

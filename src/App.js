@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header.jsx";
 import About from "./components/About/About.jsx";
+import Projects from "./components/Projects/Projects.jsx";
 import "./App.css";
 
 const App = () => {
@@ -8,9 +9,8 @@ const App = () => {
       <div id="top" className="app">
         <Header />
 
-        <main>
-          <About />
-        </main>
+        <About />
+        <Projects />
       </div>
     </>
   );

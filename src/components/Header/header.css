@@ -1,6 +1,6 @@
 .header {
   height: 8em;
-  max-width: 1024px;
+  max-width: var(--max-container-width);
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;

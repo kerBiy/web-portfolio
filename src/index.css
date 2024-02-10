@@ -1,13 +1,14 @@
 :root {
   --ff-primary: "Poppins", sans-serif;
+  --max-container-width: 1280px;
 
   --fw-slim: 300;
   --fw-normal: 400;
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
-  --clr-bg: #23283e;
-  --clr-bg-alt: #2a2f4c;
+  --clr-bg: #2a2f4c;
+  --clr-bg-alt: #23283e;
   --clr-fg: #bdbddd;
   --clr-fg-alt: #cdcdff;
   --clr-primary: #90a0d9;
@@ -18,6 +19,7 @@
   --normal-gap: 1.25rem;
   --big-gap: 2rem;
 
+  --fs-regular: 1rem;
   --fs-nav-item: 1.125rem;
   --fs-logo: 1.875rem;
 }
@@ -107,10 +109,14 @@ button:hover {
 }
 
 @media (max-width: 900px) {
-  :root {
-    --fs-logo: 1.5rem;
-  }
   h1 {
     font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --fs-logo: 1.5rem;
+    --fs-nav-item: 1.25rem;
   }
 }

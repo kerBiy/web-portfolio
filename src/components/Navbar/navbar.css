@@ -19,6 +19,8 @@
 @media (max-width: 600px) {
   .nav__list {
     display: none;
+    background-color: black;
+    opacity: 0.75;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -37,5 +39,6 @@
     display: flex;
     z-index: 2;
     margin-left: 0.8em;
+    background-color: transparent;
   }
 }

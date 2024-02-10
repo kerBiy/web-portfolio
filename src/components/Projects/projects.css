@@ -1,0 +1,16 @@
+.projects {
+  padding-top: 3em;
+
+  /* background-color: var(--clr-bg-alt);
+
+  box-shadow: 0 0 0 100vmax var(--clr-bg-alt);
+  clip-path: inset(0 -100vmax); */
+}
+
+.projects__grid {
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-gap: 2em;
+}
