@@ -5,13 +5,12 @@ const header = {
 
 const about = {
   name: "ALEX BALTA",
-  role: "Full stack developer",
+  role: "Frontend Developer",
   description:
-    "A student in computer science sldkg jlkadjs ;lg jsdlka;k jgl;ak sjdl;g jal;sj lk;dsja lj klasdnglk nsdla;n ;kladsn l;kasn l;nal;s d",
-  resume:
-    "https://drive.google.com/drive/folders/12MP3uHk94Ew6_egSJqgxbvycI60gHfXA?usp=sharing",
+    "I am a student at the University of Babes Bolyai studying Computer Science, first year. A passionate web developer who loves to suck a dick from time to time.",
+  resume: "#",
   social: {
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/alexandru-balta-720a002a9/",
     github: "https://github.com/kerBiy",
   },
 };

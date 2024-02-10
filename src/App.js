@@ -1,4 +1,5 @@
 import Header from "./components/Header/Header.jsx";
+import About from "./components/About/About.jsx";
 import "./App.css";
 
 const App = () => {
@@ -6,6 +7,10 @@ const App = () => {
     <>
       <div id="top" className="app">
         <Header />
+
+        <main>
+          <About />
+        </main>
       </div>
     </>
   );
