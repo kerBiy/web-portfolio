@@ -5,9 +5,9 @@ const header = {
 
 const about = {
   name: "ALEX BALTA",
-  role: "Frontend Developer",
+  role: "Software Developer",
   description:
-    "I am a student at the University of Babes Bolyai studying Computer Science, first year. A passionate web developer who loves to suck a dick from time to time.",
+    "I'm a passionate Computer Science student at Babes Bolyai Unviersity. Here, you'll find a fusion of my creative endeavors and insights into the world of technology. Join me as I navigate the future one key at a time.",
   resume: "#",
   social: {
     linkedin: "https://www.linkedin.com/in/alexandru-balta-720a002a9/",
@@ -18,52 +18,37 @@ const about = {
 const projects = [
   {
     id: 11,
-    name: "Movie Tracker",
+    name: "Web Portfolio",
     description:
-      "As users, we see a page that lets anyone look for the movies from the search bar by key words, and obtaining the actual or similar movies with their years, actors, rating, and description information by recommendation. In addition, they can search the nearby theaters from where they currently are located.",
-    stack: [
-      "localstorage",
-      "Openweather API",
-      "Google Map API",
-      "Movie Database API",
-    ],
-    sourceCode: "https://github.com",
-    livePreview: "https://youtube.com",
+      "As a passionate software engineer, I've crafted this digital space to showcase my skills, projects, and achievements. Explore my diverse range of projects, from innovative designs to impactful campaigns. Each piece demonstrates my dedication to quality, attention to detail, and ability to deliver results that exceed expectations.",
+    stack: ["ReactJS", "Vanilla CSS"],
+    sourceCode: "https://github.com/kerBiy/web-portfolio",
+    livePreview: "#top",
   },
   {
     id: 12,
-    name: "Event Planner",
+    name: "Website for GPT3",
     description:
-      "Event Planner was designed with the partier in mind, the one who wants to find fine dinning or a friend to have a good time. Event Planner is the easiest way for anyone to find an event to attend, create or host your own event or browse whats happening in your local area.",
-    stack: ["swiper.js", "npm", "jawsdb", "handlebars", "express", "nodejs"],
-    sourceCode: "https://github.com",
-    livePreview: "https://youtube.com",
+      "Explore our sleek and intuitive website, meticulously crafted to provide a seamless interface for interacting with ChatGPT-3. Our website boasts a clean and modern design, optimized for both desktop and mobile devices. With responsive layouts and intuitive navigation, users can effortlessly engage with ChatGPT-3 and explore its capabilities from anywhere, at any time.",
+    stack: ["ReactJS", "Vanilla CSS", "Front End"],
+    sourceCode: "https://github.com/kerBiy/Website-gpt3",
+    livePreview: "#",
   },
   {
     id: 13,
-    name: "Resource Planner",
+    name: "Space Dodge",
     description:
-      "Resource Planner is able to distrute the current resource including human resource,time and budget in one company in order to help user to manahe their projects",
-    stack: ["html-css-javascript", "sequelize", "React"],
-    sourceCode: "https://github.com",
-    livePreview: "https://youtube.com",
+      'Embark on an interstellar adventure like never before with "Space Dodge"! In this action-packed journey, players assume the role of a brave astronaut navigating the treacherous depths of space, tasked with dodging falling asteroids as they journey from left to right across the cosmos. But "Space Dodge" isn\'t just about survival, it\'s about pushing the boundaries of your skills and achieving new heights of success. The stars await—let the adventure begin!',
+    stack: ["Python", "PyGame", "Game"],
+    sourceCode: "https://github.com/kerBiy/Space-Dodge",
   },
   {
     id: 14,
-    name: "GameStoreData (back end)",
+    name: "Sorting Visualizer",
     description:
-      "GameStoreData is able to let user retrieve the game from database based on its year and category",
-    stack: ["Java 8", "MySQL", "React"],
-    sourceCode: "https://github.com",
-  },
-  {
-    id: 15,
-    name: "Music Store (back end)",
-    description:
-      "MusicStore is able to direct user to the desired page based on its endpoints by track, album,artist and label",
-    stack: ["html-css-javascript", "sequelize", "React"],
-    sourceCode: "https://github.com",
-    livePreview: "https://youtube.com",
+      "Welcome to the Sorting Algorithm Visualizer, a powerful tool designed to showcase the inner workings of various sorting algorithms in real-time! This app offers an immersive experience that brings the complexities of sorting to life before your eyes. With the Sorting Algorithm Visualizer, users can explore a diverse range of sorting methods, including QuickSort, MergeSort, HeapSort, BubbleSort, and many more.",
+    stack: ["C++", "SDL2", "Algorithms"],
+    sourceCode: "https://github.com/kerBiy/SortingTest",
   },
 ];
 
@@ -73,13 +58,12 @@ const skills = [
   "JavaScript",
   "TypeScript",
   "ReactJS",
-  "Angular",
-  "MongoDB",
-  "Django",
   "Git",
   "C++",
+  "SDL2",
   "Java",
   "Python",
+  "PyGame",
   "Docker",
   "Figma",
   "Jupiter Notebook",
