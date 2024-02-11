@@ -1,3 +1,5 @@
+import uniqid from "uniqid";
+
 import { projects } from "../../data/index.js";
 import ProjectContainer from "../ProjectContainer/ProjectContainer.jsx";
 import "./projects.css";
@@ -9,11 +11,11 @@ const Projects = () => {
     <section id="projects" className="section projects">
       <h2 className="section__title">Projects</h2>
 
-      <div className="projects__grid">
+      <ul className="projects__grid">
         {projects.map((project) => (
-          <ProjectContainer project={project} />
+          <ProjectContainer key={uniqid()} project={project} />
         ))}
-      </div>
+      </ul>
     </section>
   );
 };
