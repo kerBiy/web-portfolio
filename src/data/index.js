@@ -17,7 +17,7 @@ const about = {
 
 const projects = [
   {
-    id: 1,
+    id: 11,
     name: "Movie Tracker",
     description:
       "As users, we see a page that lets anyone look for the movies from the search bar by key words, and obtaining the actual or similar movies with their years, actors, rating, and description information by recommendation. In addition, they can search the nearby theaters from where they currently are located.",
@@ -31,7 +31,7 @@ const projects = [
     livePreview: "https://youtube.com",
   },
   {
-    id: 2,
+    id: 12,
     name: "Event Planner",
     description:
       "Event Planner was designed with the partier in mind, the one who wants to find fine dinning or a friend to have a good time. Event Planner is the easiest way for anyone to find an event to attend, create or host your own event or browse whats happening in your local area.",
@@ -40,7 +40,7 @@ const projects = [
     livePreview: "https://youtube.com",
   },
   {
-    id: 3,
+    id: 13,
     name: "Resource Planner",
     description:
       "Resource Planner is able to distrute the current resource including human resource,time and budget in one company in order to help user to manahe their projects",
@@ -49,7 +49,7 @@ const projects = [
     livePreview: "https://youtube.com",
   },
   {
-    id: 4,
+    id: 14,
     name: "GameStoreData (back end)",
     description:
       "GameStoreData is able to let user retrieve the game from database based on its year and category",
@@ -57,7 +57,7 @@ const projects = [
     sourceCode: "https://github.com",
   },
   {
-    id: 5,
+    id: 15,
     name: "Music Store (back end)",
     description:
       "MusicStore is able to direct user to the desired page based on its endpoints by track, album,artist and label",

@@ -1,17 +1,17 @@
 .footer {
-  padding: 3em 0;
+  padding: var(--padding-large) 0 var(--padding-medium);
   text-align: center;
 }
 
 .footer__link {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semi-bold);
   color: var(--clr-fg);
 }
 
 @media (max-width: 600px) {
   .footer {
-    padding: 2em;
-    margin-top: 3em;
+    padding: var(--padding-medium);
+    margin-top: var(--margin-extra-extra-large);
   }
 }

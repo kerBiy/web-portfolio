@@ -1,7 +1,7 @@
 .header {
-  height: 8em;
-  max-width: var(--max-container-width);
-  width: 80%;
+  height: var(--header-height);
+  max-width: var(--max-section-width);
+  width: var(--section-width);
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -12,6 +12,6 @@
 
 @media (max-width: 600px) {
   .header {
-    height: 6em;
+    height: var(--header-height-mobile);
   }
 }

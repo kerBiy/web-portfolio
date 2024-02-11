@@ -11,7 +11,7 @@ const Projects = () => {
 
       <div className="projects__grid">
         {projects.map((project) => (
-          <ProjectContainer project={project} className="projects__grid-item" />
+          <ProjectContainer project={project} />
         ))}
       </div>
     </section>

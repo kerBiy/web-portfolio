@@ -8,6 +8,7 @@ import Skills from "./components/Skills/Skills.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
+
 import "./App.css";
 
 const App = () => {

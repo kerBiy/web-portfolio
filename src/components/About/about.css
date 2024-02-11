@@ -1,6 +1,6 @@
 .about {
   flex-direction: column;
-  gap: 2.4em;
+  gap: var(--gap-about);
 }
 
 .about__name {
@@ -9,21 +9,21 @@
 
 .about__desc {
   font-size: var(--fs-regular);
-  max-width: 600px;
+  max-width: var(--max-description-width);
 }
 
 .about .link--icon {
-  margin-right: 0.8em;
+  margin-right: var(--margin-small);
 }
 
 .about .btn--outline {
-  margin-right: 1em;
+  margin-right: var(--margin-regular);
 }
 
 @media (max-width: 600px) {
   .app .about {
     align-items: flex-start;
-    margin-top: 2em;
+    margin-top: var(--margin-extra-large);
   }
 
   .about__name {

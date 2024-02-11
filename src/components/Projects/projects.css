@@ -1,16 +1,16 @@
 .projects {
-  padding-block: 2em;
-  background: var(--clr-bg-alt);
+  padding-block: var(--padding-medium);
 
+  /* That is some magic shit I saw on stack overflow */
+  background: var(--clr-bg-alt);
   box-shadow: 0 0 0 100vmax var(--clr-bg-alt);
   clip-path: inset(0 -100vmax);
 }
 
 .projects__grid {
-  max-width: var(--max-container-width);
+  max-width: var(--max-section-width);
   margin: 0 auto;
   display: grid;
+  grid-gap: var(--gap-projects);
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-  grid-gap: 2em;
-  z-index: 10;
 }

@@ -1,11 +1,11 @@
 .nav__list {
-  margin-right: 1.5em;
   display: flex;
+  margin-right: var(--margin-regular);
 }
 
 .nav__list-item {
-  margin-left: 1.5em;
-  font-size: var(--fs-nav-item);
+  margin-left: var(--margin-regular);
+  font-size: var(--fs-medium);
 }
 
 .app .nav__hamburger {
@@ -14,13 +14,15 @@
 
 .nav__theme {
   margin-top: 0.4em;
+  background-color: transparent;
 }
 
 @media (max-width: 600px) {
   .nav__list {
-    display: none;
     background-color: black;
-    opacity: 0.75;
+    opacity: var(--opacity-menu);
+
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -32,13 +34,18 @@
   }
 
   .nav__list-item {
-    margin: 0.5em 0;
+    margin-top: var(--margin-extra-small);
+    margin-left: 0;
+  }
+
+  .nav__list-item a {
+    color: var(--clr-nav-item);
   }
 
   .app .nav__hamburger {
+    background-color: transparent;
+    margin-left: var(--margin-small);
     display: flex;
     z-index: 2;
-    margin-left: 0.8em;
-    background-color: transparent;
   }
 }

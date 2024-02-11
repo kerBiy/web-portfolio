@@ -1,14 +1,44 @@
 :root {
   --ff-primary: "Poppins", sans-serif;
-  --max-container-width: 1280px;
+  --section-width: 80%;
+
+  --header-height: 8em;
+  --header-height-mobile: 6em;
+
+  --max-section-width: 1280px;
+  --max-description-width: 600px;
+  --max-skills-width: 700px;
+
+  --opacity-menu: 0.75;
+
+  --gap-about: 2.4em;
+  --gap-projects: 2em;
+  --gap-skills: 1em;
+
+  --border-radius-small: 0.875em;
+  --border-radius-regular: 1em;
+
+  --padding-small: 1em;
+  --padding-medium: 2em;
+  --padding-large: 3em;
+
+  --margin-extra-small: 0.5em;
+  --margin-small: 0.875em;
+  --margin-regular: 1em;
+  --margin-medium: 1.25em;
+  --margin-large: 1.5em;
+  --margin-extra-large: 2em;
+  --margin-extra-extra-large: 3em;
 
   --fw-slim: 300;
   --fw-normal: 400;
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
+  --fs-extra-small: 0.75rem;
+  --fs-small: 0.875rem;
   --fs-regular: 1rem;
-  --fs-nav-item: 1.125rem;
+  --fs-medium: 1.125rem;
   --fs-logo: 1.875rem;
 }
 
@@ -18,7 +48,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: inherit;
 }
 
 html {
@@ -27,8 +56,6 @@ html {
 
 img,
 picture,
-video,
-canvas,
 svg {
   display: block;
   max-width: 100%;
@@ -68,10 +95,6 @@ h3 {
   font-size: 1.5rem;
 }
 
-h4 {
-  font-size: 1.3rem;
-}
-
 ul li {
   list-style: none;
 }
@@ -82,9 +105,8 @@ a {
 }
 
 button {
-  color: inherit;
-  outline: 0;
   border: 0;
+  color: inherit;
 }
 
 a:hover,
@@ -101,6 +123,6 @@ button:hover {
 @media (max-width: 600px) {
   :root {
     --fs-logo: 1.5rem;
-    --fs-nav-item: 1.25rem;
+    --fs-medium: 1.25rem;
   }
 }

@@ -8,7 +8,7 @@ const About = () => {
 
   return (
     <div className="about center section">
-      {photo && <img height="200px" alt="Avatar placeholder" src={photo} />}
+      {/* {photo && <img height="200px" alt="Avatar placeholder" src={photo} />} */}
       {name && (
         <h1>
           Hi, I am <span className="about__name">{name}.</span>
@@ -16,7 +16,7 @@ const About = () => {
       )}
 
       {role && <h2 className="about__role">A {role}.</h2>}
-      <p className="about__desc">{description && description}</p>
+      {description && <p className="about__desc">{description}</p>}
 
       <div className="about__contact center">
         {resume && (

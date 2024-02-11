@@ -1,8 +1,10 @@
 import { useContext, useState } from "react";
+
 import Brightness2Icon from "@mui/icons-material/Brightness2";
 import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+
 import { ThemeContext } from "../../themes";
 import { projects, skills, contact } from "../../data";
 import "./navbar.css";
@@ -49,7 +51,6 @@ const Navbar = () => {
               href="#contact"
               onClick={toggleNavList}
               className="link link--nav"
-              aria-label="toggle theme"
             >
               Contact
             </a>
@@ -61,6 +62,7 @@ const Navbar = () => {
         type="button"
         onClick={toggleTheme}
         className="btn btn--icon nav__theme"
+        aria-label="toggle theme"
       >
         {themeName === "dark" ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
       </button>

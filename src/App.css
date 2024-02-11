@@ -1,4 +1,5 @@
 .light {
+  /* Gradients website: https://mycolor.space/gradient?ori=to+top&hex=%2323283E&hex2=%232A2F4C&sub=1 */
   --clr-bg: radial-gradient(
     circle,
     #ffffff,
@@ -11,6 +12,7 @@
   --clr-fg: #555;
   --clr-fg-alt: #444;
   --clr-primary: #516dd3;
+  --clr-nav-item: #cccccc;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -27,6 +29,7 @@
   --clr-fg: #bdbddd;
   --clr-fg-alt: #cdcdff;
   --clr-primary: #90a0d9;
+  --clr-nav-item: #bdbddd;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -39,8 +42,8 @@
 }
 
 .section {
-  max-width: var(--max-container-width);
-  width: 80%;
+  max-width: var(--max-section-width);
+  width: var(--section-width);
   margin: 4em auto 0;
 }
 
@@ -56,7 +59,6 @@
 }
 
 .link {
-  color: var(--clr-primary);
   padding: 0 0 0.3em 0;
   position: relative;
 }
@@ -93,9 +95,10 @@
 
 .btn {
   display: block;
+  border-radius: 0.875em;
   padding: 0.8em 1.4em;
   font-weight: var(--fw-semi-bold);
-  font-size: 1rem;
+  font-size: var(--fs-regular);
   text-transform: lowercase;
   transition: transform 0.2s ease-in-out;
 }
