@@ -15,8 +15,8 @@ const App = () => {
   const [{ themeName }] = useContext(ThemeContext);
 
   // Nigga i don't really know what the fuck am I doing here
-  const body = (document.getElementsByTagName("body")[0].style.backgroundColor =
-    themeName === "dark" ? "#2a2f4c" : "#dee4e7");
+  document.getElementsByTagName("body")[0].style.backgroundColor =
+    themeName === "dark" ? "#2a2f4c" : "#dee4e7";
 
   return (
     <div id="top" className={`${themeName} app`}>

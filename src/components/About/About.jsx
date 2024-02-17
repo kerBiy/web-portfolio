@@ -4,11 +4,10 @@ import { about } from "../../data";
 import "./about.css";
 
 const About = () => {
-  const { photo, name, role, description, resume, social } = about;
+  const { name, role, description, resume, social } = about;
 
   return (
     <div className="about center section">
-      {/* {photo && <img height="200px" alt="Avatar placeholder" src={photo} />} */}
       {name && (
         <h1>
           Hi, I am <span className="about__name">{name}.</span>
