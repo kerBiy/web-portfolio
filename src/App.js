@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "./themes";
+import { ThemeContext } from "./contexts/theme.jsx";
 
 import Header from "./components/Header/Header.jsx";
 import About from "./components/About/About.jsx";

@@ -5,7 +5,7 @@ import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { ThemeContext } from "../../themes";
+import { ThemeContext } from "../../contexts/theme";
 import { projects, skills, contact } from "../../data";
 import "./navbar.css";
 
