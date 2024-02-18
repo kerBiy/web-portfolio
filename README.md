@@ -8,7 +8,7 @@ Here is the website: [Live Demo](https://kerBiy.github.io/web-portfolio)
 
 ## Screenshots
 
-![App Screenshot](src/assets/images/readme.jpg?raw=true)
+![App Screenshot](public/img/readme.jpg?raw=true)
 
 ## Run Locally
 
