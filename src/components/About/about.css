@@ -12,12 +12,9 @@
   max-width: var(--max-description-width);
 }
 
-.about .link--icon {
-  margin-right: var(--margin-small);
-}
-
-.about .btn--outline {
-  margin-right: var(--margin-regular);
+.about__contact {
+  display: grid;
+  gap: var(--gap-button);
 }
 
 @media (max-width: 600px) {
