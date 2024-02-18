@@ -20,7 +20,9 @@ const Navbar = () => {
     };
   }, [showNavList]);
 
-  const toggleNavList = () => setShowNavList(!showNavList);
+  const toggleNavList = () => {
+    setShowNavList(window.innerWidth <= 600 ? !showNavList : showNavList);
+  };
 
   return (
     <nav className="center nav">
