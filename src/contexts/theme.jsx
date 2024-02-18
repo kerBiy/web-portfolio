@@ -6,6 +6,10 @@ const ThemeContext = createContext();
 const ThemeProvider = ({ children }) => {
   const [themeName, setThemeName] = useState("light");
 
+  // Nigga i don't really know what the fuck am I doing here
+  document.body.style.backgroundColor =
+    themeName === "dark" ? "#2a2f4c" : "#dee4e7";
+
   useEffect(() => {
     const darkMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     setThemeName(darkMediaQuery.matches ? "dark" : "light");
