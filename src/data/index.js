@@ -1,5 +1,5 @@
 const header = {
-  homepage: "#",
+  homepage: "https://kerBiy.github.io/web-portfolio",
   title: "AB.",
 };
 

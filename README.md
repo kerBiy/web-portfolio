@@ -1,18 +1,14 @@
-
 # Web Portfolio
 
 As a passionate software developer, I've crafted this digital space to showcase my skills, projects, and achievements. Explore my diverse range of projects, from innovative designs to impactful campaigns. Each piece demonstrates my dedication to quality, attention to detail, and ability to deliver results that exceed expectations.
 
-
 ## Demo
 
-Insert gif or link to demo
-
+![Live Demo](https://kerBiy.github.io/web-portfolio)
 
 ## Screenshots
 
 ![App Screenshot](src/assets/images/readme.jpg?raw=true)
-
 
 ## Run Locally
 
@@ -40,10 +36,8 @@ Start the server
   npm start
 ```
 
-
 ## Tech Stack
 
 **Client:** React
 
 **Server:** Node, Express
-
