@@ -1,0 +1,49 @@
+
+# Web Portfolio
+
+As a passionate software developer, I've crafted this digital space to showcase my skills, projects, and achievements. Explore my diverse range of projects, from innovative designs to impactful campaigns. Each piece demonstrates my dedication to quality, attention to detail, and ability to deliver results that exceed expectations.
+
+
+## Demo
+
+Insert gif or link to demo
+
+
+## Screenshots
+
+![App Screenshot](src/assets/img/readme.jpg?raw=true)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/kerBiy/web-portfolio.git
+```
+
+Go to the project directory
+
+```bash
+  cd web-portfolio
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+
+## Tech Stack
+
+**Client:** React
+
+**Server:** Node, Express
+
