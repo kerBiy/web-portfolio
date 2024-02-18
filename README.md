@@ -11,7 +11,7 @@ Insert gif or link to demo
 
 ## Screenshots
 
-![App Screenshot](src/assets/img/readme.jpg?raw=true)
+![App Screenshot](src/assets/images/readme.jpg?raw=true)
 
 
 ## Run Locally
