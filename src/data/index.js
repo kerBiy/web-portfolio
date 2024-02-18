@@ -7,7 +7,7 @@ const about = {
   name: "ALEX BALTA",
   role: "Software Developer",
   description:
-    "I'm a passionate Computer Science student at Babes Bolyai Unviersity. Here, you'll find a fusion of my creative endeavors and insights into the world of technology. Join me as I navigate the future one key at a time.",
+    "I'm a passionate Computer Science student at Babes Bolyai University. Here, you'll find a fusion of my creative endeavors and insights into the world of technology. Join me as I navigate the future one key at a time.",
   resume: "#",
   social: {
     linkedin: "https://www.linkedin.com/in/alexandru-balta-720a002a9/",
