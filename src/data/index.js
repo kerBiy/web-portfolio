@@ -22,7 +22,7 @@ const projects = [
       "As a passionate software developer, I've crafted this digital space to showcase my skills, projects, and achievements. Explore my diverse range of projects, from innovative designs to impactful campaigns. Each piece demonstrates my dedication to quality, attention to detail, and ability to deliver results that exceed expectations.",
     stack: ["ReactJS", "Vanilla CSS"],
     sourceCode: "https://github.com/kerBiy/web-portfolio",
-    livePreview: "#top",
+    livePreview: "https://kerBiy.github.io/web-portfolio",
   },
   {
     name: "Website for GPT3",

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 
 import Brightness2Icon from "@mui/icons-material/Brightness2";
 import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
@@ -12,6 +12,13 @@ import "./navbar.css";
 const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext);
   const [showNavList, setShowNavList] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = showNavList ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showNavList]);
 
   const toggleNavList = () => setShowNavList(!showNavList);
 
