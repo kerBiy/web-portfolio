@@ -8,7 +8,13 @@ Here is the website: [Live Demo](https://kerBiy.github.io/web-portfolio)
 
 ## Screenshots
 
-![App Screenshot](public/img/readme.jpg?raw=true)
+### Dark Mode
+
+![App Screenshot in Dark Mode](public/img/readme-dark.jpg?raw=true)
+
+### Light Mode
+
+![App Screenshot in Light Mode](public/img/readme-white.jpg?raw=true)
 
 ## Run Locally
 
