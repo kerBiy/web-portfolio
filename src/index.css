@@ -1,11 +1,26 @@
 :root {
-  --ff-primary: "Poppins", sans-serif;
-  --section-width: 80%;
+  --ff-primary: "Inter Tight", sans-serif;
+  --ff-heading: "Gloock", serif;
+
+  --fw-heading: 300;
+  --fw-normal: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-extra-small: 0.75rem;
+  --fs-small: 0.875rem;
+  --fs-regular: 1rem;
+  --fs-medium: 1.125rem;
+  --fs-logo: 1.875rem;
+
+  --ls-large: 0.05em;
+  --ls-regular: 0.025em;
 
   --header-height: 8em;
   --header-height-mobile: 6em;
 
-  --max-section-width: 1280px;
+  --section-width: 80%;
+  --max-section-width: 1360px;
   --max-description-width: 600px;
   --max-skills-width: 700px;
 
@@ -30,17 +45,6 @@
   --margin-large: 1.5em;
   --margin-extra-large: 2em;
   --margin-extra-extra-large: 3em;
-
-  --fw-slim: 300;
-  --fw-normal: 400;
-  --fw-semi-bold: 600;
-  --fw-bold: 700;
-
-  --fs-extra-small: 0.75rem;
-  --fs-small: 0.875rem;
-  --fs-regular: 1rem;
-  --fs-medium: 1.125rem;
-  --fs-logo: 1.875rem;
 
   --clr-dark: #2a2f4c;
   --clr-light: #dee4e7;

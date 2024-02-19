@@ -10,11 +10,11 @@ const About = () => {
     <div className="about center section">
       {name && (
         <h1>
-          Hi, I am <span className="about__name">{name}.</span>
+          Hi, I am <span className="about__name ">{name}.</span>
         </h1>
       )}
 
-      {role && <h2 className="about__role">A {role}.</h2>}
+      {role && <h2 className="about__role heading-text">A {role}.</h2>}
       {description && <p className="about__desc">{description}</p>}
 
       <div className="about__contact center">
