@@ -49,14 +49,14 @@
 
 .heading-text {
   font-family: var(--ff-heading);
-  font-weight: var(--fw-heading);
+  font-weight: var(--fw-bold);
   letter-spacing: var(--ls-large);
 }
 
 .section__title {
   letter-spacing: var(--ls-regular);
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: var(--margin-regular);
   text-transform: uppercase;
 }
 
@@ -102,7 +102,7 @@
 
 .btn {
   display: block;
-  border-radius: 0.875em;
+  border-radius: var(--border-radius-small);
   padding: 0.8em 1.4em;
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-regular);
@@ -166,16 +166,16 @@
 
 @media (max-width: 900px) {
   .section {
-    margin-top: 4rem;
+    margin-top: var(--margin-extra-extra-large);
   }
 
   .section__title {
-    margin-bottom: 1em;
+    margin-bottom: var(--margin-regular);
   }
 }
 
 @media (max-width: 600px) {
   .section {
-    margin-top: 2em;
+    margin-top: var(--margin-extra-large);
   }
 }

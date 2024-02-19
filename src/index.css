@@ -2,7 +2,6 @@
   --ff-primary: "Poppins", sans-serif;
   --ff-heading: "Gloock", serif;
 
-  --fw-heading: 300;
   --fw-normal: 400;
   --fw-semi-bold: 600;
   --fw-bold: 700;
@@ -24,7 +23,7 @@
   --max-description-width: 600px;
   --max-skills-width: 700px;
 
-  --opacity-menu: 0.75;
+  --opacity-menu: 0.85;
 
   --gap-about: 2.4em;
   --gap-projects: 2em;
