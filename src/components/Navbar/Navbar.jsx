@@ -13,6 +13,7 @@ const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext);
   const [showNavList, setShowNavList] = useState(false);
 
+  // Scroll Blocker
   useEffect(() => {
     document.body.style.overflow = showNavList ? "hidden" : "auto";
     return () => {
@@ -21,7 +22,8 @@ const Navbar = () => {
   }, [showNavList]);
 
   const toggleNavList = () => {
-    setShowNavList(window.innerWidth <= 600 ? !showNavList : showNavList);
+    const showNav = window.innerWidth <= 600 ? !showNavList : showNavList;
+    setShowNavList(showNav);
   };
 
   return (

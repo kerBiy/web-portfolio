@@ -1,9 +1,9 @@
-const header = {
+export const header = {
   homepage: "https://kerBiy.github.io/web-portfolio",
   title: "AB.",
 };
 
-const about = {
+export const about = {
   name: "ALEX BALTA",
   role: "Software Developer",
   description:
@@ -15,7 +15,7 @@ const about = {
   },
 };
 
-const projects = [
+export const projects = [
   {
     name: "Web Portfolio",
     description:
@@ -48,7 +48,7 @@ const projects = [
   },
 ];
 
-const skills = [
+export const skills = [
   "HTML",
   "CSS",
   "JavaScript",
@@ -65,8 +65,6 @@ const skills = [
   "Jupiter Notebook",
 ];
 
-const contact = {
+export const contact = {
   email: "alexandrubalta222@gmail.com",
 };
-
-export { header, about, projects, skills, contact };
