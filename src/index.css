@@ -130,5 +130,6 @@ button:hover {
   :root {
     --fs-logo: 1.5rem;
     --fs-medium: 1.25rem;
+    --section-width: 85%;
   }
 }

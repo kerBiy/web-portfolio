@@ -1,5 +1,5 @@
-import { header } from "../../data";
 import Navbar from "../Navbar/Navbar.jsx";
+import { header } from "../../data";
 import "./header.css";
 
 const Header = () => {

@@ -1,7 +1,8 @@
 import uniqid from "uniqid";
 
-import { projects } from "../../data/index.js";
 import ProjectContainer from "../ProjectContainer/ProjectContainer.jsx";
+import { projects } from "../../data";
+
 import "./projects.css";
 
 const Projects = () => {
