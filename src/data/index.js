@@ -1,5 +1,5 @@
 export const header = {
-  homepage: "https://kerBiy.github.io/web-portfolio",
+  homepage: "https://kerBiy.github.io/Web-Portfolio",
   title: "AB.",
 };
 
@@ -30,14 +30,6 @@ export const projects = [
       'Embark on an interstellar adventure like never before with "Space Dodge"! In this action-packed journey, players assume the role of a brave astronaut navigating the treacherous depths of space, tasked with dodging falling asteroids as they journey from left to right across the cosmos. But "Space Dodge" isn\'t just about survival, it\'s about pushing the boundaries of your skills and achieving new heights of success. The stars await—let the adventure begin!',
     stack: ["Python", "PyGame", "Game"],
     sourceCode: "https://github.com/kerBiy/Space-Dodge",
-  },
-  {
-    name: "Website for GPT3",
-    description:
-      "Explore our sleek and intuitive website, meticulously crafted to provide a seamless interface for interacting with ChatGPT-3. Our website boasts a clean and modern design, optimized for both desktop and mobile devices. With responsive layouts and intuitive navigation, users can effortlessly engage with ChatGPT-3 and explore its capabilities from anywhere, at any time.",
-    stack: ["ReactJS", "Vanilla CSS", "Front End"],
-    sourceCode: "https://github.com/kerBiy/Website-gpt3",
-    livePreview: "#",
   },
   {
     name: "Sorting Visualizer",
