@@ -21,8 +21,8 @@ export const projects = [
     description:
       "As a passionate software developer, I've crafted this digital space to showcase my skills, projects, and achievements. Explore my diverse range of projects, from innovative designs to impactful campaigns. Each piece demonstrates my dedication to quality, attention to detail, and ability to deliver results that exceed expectations.",
     stack: ["ReactJS", "Vanilla CSS", "Font End"],
-    sourceCode: "https://github.com/kerBiy/web-portfolio",
-    livePreview: "https://kerBiy.github.io/web-portfolio",
+    sourceCode: "https://github.com/kerBiy/Web-Portfolio",
+    livePreview: "https://kerBiy.github.io/Web-Portfolio",
   },
   {
     name: "Space Dodge",
@@ -36,7 +36,7 @@ export const projects = [
     description:
       "Welcome to the Sorting Algorithm Visualizer, a powerful tool designed to showcase the inner workings of various sorting algorithms in real-time! This app offers an immersive experience that brings the complexities of sorting to life before your eyes. With the Sorting Algorithm Visualizer, users can explore a diverse range of sorting methods, including QuickSort, MergeSort, HeapSort, BubbleSort, and many more.",
     stack: ["C++", "SDL2", "Algorithms"],
-    sourceCode: "https://github.com/kerBiy/SortingTest",
+    sourceCode: "https://github.com/kerBiy/Sorting-Visualizer",
   },
 ];
 
