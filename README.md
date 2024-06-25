@@ -4,7 +4,7 @@ As a passionate software developer, I've crafted this digital space to showcase 
 
 ## Live Website
 
-Here is the website: [Live Demo](https://kerBiy.github.io/Web-Portfolio)
+Here is the website: [Live Demo](https://kerBiy.github.io/web-portfolio)
 
 ## Screenshots
 

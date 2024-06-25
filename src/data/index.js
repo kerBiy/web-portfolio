@@ -1,5 +1,5 @@
 export const header = {
-  homepage: "https://kerBiy.github.io/Web-Portfolio",
+  homepage: "https://kerBiy.github.io/web-portfolio",
   title: "AB.",
 };
 
@@ -22,7 +22,7 @@ export const projects = [
       "As a passionate software developer, I've crafted this digital space to showcase my skills, projects, and achievements. Explore my diverse range of projects, from innovative designs to impactful campaigns. Each piece demonstrates my dedication to quality, attention to detail, and ability to deliver results that exceed expectations.",
     stack: ["ReactJS", "Vanilla CSS", "Font End"],
     sourceCode: "https://github.com/kerBiy/Web-Portfolio",
-    livePreview: "https://kerBiy.github.io/Web-Portfolio",
+    livePreview: "https://kerBiy.github.io/web-portfolio",
   },
   {
     name: "Space Dodge",
