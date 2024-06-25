@@ -21,13 +21,13 @@ Here is the website: [Live Demo](https://kerBiy.github.io/web-portfolio)
 Clone the project
 
 ```bash
-  git clone https://github.com/kerBiy/Web-Portfolio.git
+  git clone https://github.com/kerBiy/web-portfolio.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd Web-Portfolio
+  cd web-portfolio
 ```
 
 Install dependencies
