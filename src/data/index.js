@@ -35,8 +35,8 @@ export const projects = [
     name: "Sorting Visualizer",
     description:
       "Welcome to the Sorting Algorithm Visualizer, a powerful tool designed to showcase the inner workings of various sorting algorithms in real-time! This app offers an immersive experience that brings the complexities of sorting to life before your eyes. With the Sorting Algorithm Visualizer, users can explore a diverse range of sorting methods, including QuickSort, MergeSort, HeapSort, BubbleSort, and many more.",
-    stack: ["C++", "SDL2", "Algorithms"],
-    sourceCode: "https://github.com/kerBiy/Sorting-Visualizer",
+    stack: ["C++", "Qt", "GUI", "Algorithms"],
+    sourceCode: "https://github.com/kerBiy/sorting-visualizer",
   },
 ];
 
@@ -44,16 +44,16 @@ export const skills = [
   "HTML",
   "CSS",
   "JavaScript",
-  "TypeScript",
   "React",
   "ES6",
   "Git",
   "C++",
-  "SDL2",
+  "Qt",
   "Java",
   "Python",
   "PyGame",
   "VS Code",
+  "Vim",
 ];
 
 export const contact = {
