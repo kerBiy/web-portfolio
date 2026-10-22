@@ -2,38 +2,45 @@ import { experience, education } from "../../data";
 import "./experience.css";
 
 const Experience = () => (
-  <section id="experience" className="section experience fade-in">
-    <h2 className="section__title">Experience &amp; Education</h2>
+  <section id="experience" className="experience split grid">
+    <h2 className="section-title split__title" data-rv="title">
+      <span data-rv-inner>Experience &amp; Education</span>
+    </h2>
 
-    <ul className="experience__list">
+    <div className="split__body">
+      <h3 className="experience__label" data-rv="up">
+        Experience
+      </h3>
       {experience.map((job) => (
-        <li key={`${job.company}-${job.role}`} className="card experience__item">
+        <article key={`${job.company}-${job.role}`} className="experience__job" data-rv="up">
           <div className="experience__head">
-            <h3 className="heading-text">
-              {job.role} · <span className="experience__org">{job.company}</span>
-            </h3>
-            <p className="experience__meta">
-              {job.period} · {job.location}
-            </p>
+            <h4 className="experience__title">
+              {job.role}, {job.company}
+            </h4>
+            <p className="experience__meta">{job.location}</p>
           </div>
-          <ul className="bullets">
+          <p className="experience__period">{job.period}</p>
+          <ul className="experience__bullets">
             {job.highlights.map((line) => (
               <li key={line}>{line}</li>
             ))}
           </ul>
-        </li>
+        </article>
       ))}
 
+      <h3 className="experience__label experience__label--edu" data-rv="up">
+        Education
+      </h3>
       {education.map((edu) => (
-        <li key={edu.degree} className="experience__item experience__item--edu">
+        <article key={edu.degree} className="experience__edu" data-rv="up">
           <div className="experience__head">
-            <h3 className="experience__degree">{edu.degree}</h3>
-            <p className="experience__meta">{edu.period}</p>
+            <h4 className="experience__degree">{edu.degree}</h4>
+            <p className="experience__meta">{edu.school}</p>
           </div>
-          <p>{edu.school}</p>
-        </li>
+          <p className="experience__period">{edu.period}</p>
+        </article>
       ))}
-    </ul>
+    </div>
   </section>
 );
 
