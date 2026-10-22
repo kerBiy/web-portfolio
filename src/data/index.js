@@ -1,8 +1,3 @@
-export const header = {
-  homepage: "https://kerBiy.github.io/web-portfolio",
-  title: "AB.",
-};
-
 export const about = {
   name: "Alexandru Balta",
   role: "Software Engineer",

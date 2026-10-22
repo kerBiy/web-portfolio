@@ -1,18 +1,131 @@
 .header {
   height: var(--header-height);
-  max-width: var(--max-section-width);
-  width: var(--section-width);
-  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.header__logo {
+  padding: 10px 0;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-logo);
+  letter-spacing: var(--ls-logo);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.header__logo:hover {
+  color: var(--accent);
+}
+
+.header__nav {
+  display: flex;
+  gap: 2.25rem;
+  font-size: var(--fs-sm);
+}
+
+.header__link {
+  padding: var(--space-3) 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header__link:hover {
+  color: var(--accent);
+}
+
+.header__actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.header__menu-btn {
+  display: none;
+}
+
+/* Full-screen menu sheet (small screens only) */
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  padding: 0 var(--gutter) var(--space-7);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: menu-in 0.45s var(--spring-soft) both;
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.menu__bar {
+  height: var(--header-height);
+  flex: none;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  font-size: var(--fs-logo);
-  color: var(--clr-fg-alt);
+.menu__nav {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width: 600px) {
-  .header {
-    height: var(--header-height-mobile);
+.menu__link {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--ff-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-menu);
+  line-height: 1.2;
+  letter-spacing: var(--ls-title);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.menu__link:hover,
+.menu__link:focus-visible {
+  color: var(--accent);
+}
+
+.menu__footer {
+  margin-top: auto;
+  padding-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu__social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  font-size: var(--fs-sm);
+}
+
+.menu__social .lnk {
+  padding: var(--space-3) 0;
+}
+
+@media (max-width: 760px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__menu-btn {
+    display: grid;
   }
 }
