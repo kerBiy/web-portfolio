@@ -1,45 +1,62 @@
-import uniqid from "uniqid";
-
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 
 import "./projectContainer.css";
 
-const ProjectContainer = ({ project }) => (
-  <div className="project">
-    <h3 className="heading-text">{project.name}</h3>
+const ProjectContainer = ({ project }) => {
+  const { name, pitch, highlights, stack, sourceCode, livePreview, image, featured } = project;
 
-    <p className="project__description">{project.description}</p>
-    {project.stack && (
-      <ul className="project__stack">
-        {project.stack.map((item) => (
-          <li key={uniqid()} className="project__stack-item">
-            {item}
-          </li>
-        ))}
-      </ul>
-    )}
+  return (
+    <li className={`card project${featured ? " project--featured" : ""}`}>
+      {image && (
+        <img
+          className="project__image"
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          loading="lazy"
+        />
+      )}
 
-    {project.sourceCode && (
-      <a
-        href={project.sourceCode}
-        aria-label="source code"
-        className="link link--icon"
-      >
-        <GitHubIcon />
-      </a>
-    )}
+      <div className="project__body">
+        {featured && <p className="project__badge">Featured project</p>}
+        <h3 className="heading-text">{name}</h3>
+        <p className="project__pitch">{pitch}</p>
 
-    {project.livePreview && (
-      <a
-        href={project.livePreview}
-        aria-label="live preview"
-        className="link link--icon"
-      >
-        <LaunchIcon />
-      </a>
-    )}
-  </div>
-);
+        {highlights?.length > 0 && (
+          <ul className="bullets">
+            {highlights.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+        )}
+
+        {stack && (
+          <ul className="project__stack" aria-label="Tech stack">
+            {stack.map((item) => (
+              <li key={item} className="project__stack-item">
+                {item}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <div className="project__links">
+          {sourceCode && (
+            <a href={sourceCode} className="link link--icon project__link">
+              <GitHubIcon fontSize="small" aria-hidden="true" /> Code
+            </a>
+          )}
+          {livePreview && (
+            <a href={livePreview} className="link link--icon project__link">
+              <LaunchIcon fontSize="small" aria-hidden="true" /> Live demo
+            </a>
+          )}
+        </div>
+      </div>
+    </li>
+  );
+};
 
 export default ProjectContainer;

@@ -1,0 +1,42 @@
+.experience__list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--gap-projects);
+}
+
+.experience__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25em 1em;
+  margin-bottom: var(--margin-extra-small);
+}
+
+.experience__org {
+  color: var(--clr-primary);
+}
+
+.experience__meta {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semi-bold);
+}
+
+.experience__item--edu {
+  padding: 0 var(--padding-medium);
+}
+
+.experience__item--edu .experience__head {
+  margin-bottom: 0;
+}
+
+.experience__degree {
+  font-size: var(--fs-medium);
+}
+
+@media (max-width: 600px) {
+  .experience__item--edu {
+    padding: 0;
+  }
+}

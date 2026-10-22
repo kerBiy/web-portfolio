@@ -1,7 +1,7 @@
 .projects {
   padding-block: var(--padding-medium);
 
-  /* That is some magic shit I saw on stack overflow */
+  /* Full-bleed background while content stays in the section width */
   background: var(--clr-bg-alt);
   box-shadow: 0 0 0 100vmax var(--clr-bg-alt);
   clip-path: inset(0 -100vmax);
@@ -11,6 +11,27 @@
   max-width: var(--max-section-width);
   margin: 0 auto;
   display: grid;
-  grid-gap: var(--gap-projects);
-  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  gap: var(--gap-projects);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22em), 1fr));
+}
+
+.projects__grid--main {
+  grid-template-columns: 1fr;
+}
+
+.projects__subtitle {
+  margin: var(--margin-extra-extra-large) 0 var(--margin-regular);
+  text-align: center;
+  font-size: var(--fs-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-regular);
+}
+
+.projects__grid--compact .project__body {
+  padding: var(--padding-small) 1.5em 1.5em;
+  font-size: var(--fs-small);
+}
+
+.projects__grid--compact h3 {
+  font-size: 1.2rem;
 }

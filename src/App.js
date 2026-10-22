@@ -4,6 +4,7 @@ import { ThemeContext } from "./contexts/theme.jsx";
 import {
   Header,
   About,
+  Experience,
   Projects,
   Skills,
   Contact,
@@ -42,10 +43,13 @@ const App = () => {
     <div id="top" className={`${themeName} app`}>
       <Header />
 
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      <main>
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
 
       <ScrollToTop />
       <Footer />

@@ -4,85 +4,132 @@ export const header = {
 };
 
 export const about = {
-  name: "ALEX BALTA",
-  role: "Software Developer",
+  name: "Alexandru Balta",
+  role: "Software Engineer",
+  subtitle: "Full-Stack · Java & React",
   description:
-    "I'm a passionate Computer Science student at Babes Bolyai University. Here, you'll find a fusion of my creative endeavors and insights into the world of technology. Join me as I navigate the future one key at a time.",
-  resume:
-    "https://drive.google.com/file/d/1_bTNPGaO3aTN2n4FCe0MGqaEXr6-Aq_x/view?usp=sharing",
+    "I like building software end to end, from the database to the UI. I'm an MSc student in Distributed Systems at Babeș-Bolyai University, I shipped a production feature at 8x8, and I'm building Crate, a Letterboxd for albums.",
+  resume: `${process.env.PUBLIC_URL}/Alexandru_Balta_Resume.pdf`,
   social: {
     linkedin: "https://www.linkedin.com/in/alexandru-balta",
     github: "https://github.com/kerBiy",
   },
 };
 
-export const projects = [
-  // {
-  //   name: "Web Portfolio",
-  //   description:
-  //     "As a passionate software developer, I've crafted this digital space to showcase my skills, projects, and achievements. Explore my diverse range of projects, from innovative designs to impactful campaigns. Each piece demonstrates my dedication to quality, attention to detail, and ability to deliver results that exceed expectations.",
-  //   stack: ["ReactJS", "Vanilla CSS", "Font End"],
-  //   sourceCode: "https://github.com/kerBiy/web-portfolio",
-  //   livePreview: "https://kerBiy.github.io/web-portfolio",
-  // },
+export const experience = [
   {
-    name: "Simple Chat",
-    description:
-      "I've build this chat app to demonstrate my expertise in real-time communication and responsive design. Explore this streamlined, cross-platform messaging tool, featuring secure authentication, instant messaging, and mobile-friendly navigation. Every aspect of this project showcases my focus on user experience, functionality, and clean, modern UI, delivering a seamless chat experience across all devices.",
-    stack: ["MERN", "TailwindCSS", "FullStack"],
+    role: "Software Engineer Intern",
+    company: "8x8",
+    location: "Cluj-Napoca, Romania",
+    period: "Jul 2025 – Sep 2025",
+    highlights: [
+      "Built and shipped the Favorite Customers feature to production (Spring Boot, Hibernate/JPA, React, Liquibase) for an internal tools platform used daily by 100+ employees.",
+      "Preloaded and cached favorite client profiles in the background, replacing a ~1s client lookup with one-click access.",
+      "Presented the feature to engineering executives and stakeholders in California.",
+    ],
+  },
+];
+
+export const education = [
+  {
+    degree: "MSc in Distributed Systems",
+    school: "Babeș-Bolyai University, Cluj-Napoca",
+    period: "Oct 2026 – Jul 2028 (expected)",
+  },
+  {
+    degree: "BSc in Computer Science",
+    school: "Babeș-Bolyai University, Cluj-Napoca",
+    period: "Oct 2023 – Jul 2026",
+  },
+];
+
+export const projects = [
+  {
+    name: "Crate — Letterboxd for Albums",
+    featured: true,
+    pitch: "Rate and review albums with friends, built as event-driven microservices.",
+    highlights: [
+      "React frontend, a Spring Cloud Gateway with JWT auth, and three Spring Boot microservices with isolated PostgreSQL databases.",
+      "Rating aggregates synced across services with Kafka events and idempotent consumers, verified by 149 Testcontainers integration tests in GitHub Actions.",
+      "Built a search evaluation harness and redesigned ranking with ListenBrainz data, raising top-3 accuracy from 13/30 to 28/30.",
+    ],
+    stack: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "React", "TypeScript", "Docker"],
+    sourceCode: "https://github.com/kerBiy/crate",
+    // TODO(alex): add the Crate live demo URL here; the "Live demo" link appears once it's set.
+    livePreview: "",
+    image: {
+      src: `${process.env.PUBLIC_URL}/img/projects/crate.jpg`,
+      alt: "Crate album page for Kid A by Radiohead, showing the average rating, a rating histogram and friends' reviews",
+      width: 1200,
+      height: 750,
+    },
+  },
+  {
+    name: "SNN Brain Explorer",
+    pitch: "Bachelor's thesis with the CRIStAL Laboratory (Univ. of Lille): a visualization tool for latency-coded Spiking Neural Networks.",
+    highlights: [
+      "Makes neuron timing visible, where other tools only showed outputs.",
+      "FastAPI backend turns canvas drawings into MNIST inputs for the lab's C++ simulator; a React dashboard replays neuron activity layer by layer.",
+      "RAG-powered GPT-4o assistant that explains SNN dynamics and diagnoses classification errors.",
+    ],
+    stack: ["React", "FastAPI", "Python", "C++", "OpenAI API"],
+    sourceCode: "https://github.com/kerBiy/snn-brain-explorer",
+    image: {
+      src: `${process.env.PUBLIC_URL}/img/projects/snn-brain-explorer.jpg`,
+      alt: "SNN Brain Explorer Interactive Lab showing pool1 spike-timing maps, mean latency per channel and a playback slider",
+      width: 1200,
+      height: 649,
+    },
+  },
+  {
+    name: "Real-Time Messaging Platform",
+    earlier: true,
+    pitch: "A responsive chat app with real-time messaging.",
+    highlights: [
+      "Instant messaging between users over Socket.IO.",
+      "Registration and login, with users and chats stored in MongoDB.",
+    ],
+    stack: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "Tailwind"],
     sourceCode: "https://github.com/kerBiy/simple-chat",
   },
   {
-    name: "Job Finder",
-    description:
-      "I created a sleek, cross-platform tool for effortless job hunting. Users can search, view, and apply for jobs directly, with real-time updates from integrated APIs. The app features intuitive navigation, responsive design, and local storage for saved jobs, enhancing user satisfaction and retention. Explore how this app transforms job searching into a smooth, efficient experience!",
-    stack: ["React Native", "Expo", "Mobile App"],
-    sourceCode: "https://github.com/kerBiy/job-finder",
-  },
-  {
-    name: "Space Dodge",
-    description:
-      'Embark on an interstellar adventure like never before with "Space Dodge"! In this action-packed journey, players assume the role of a brave astronaut navigating the treacherous depths of space, tasked with dodging falling asteroids as they journey from left to right across the cosmos. But "Space Dodge" isn\'t just about survival, it\'s about pushing the boundaries of your skills and achieving new heights of success. The stars await—let the adventure begin!',
-    stack: ["Python", "PyGame", "Game"],
-    sourceCode: "https://github.com/kerBiy/Space-Dodge",
-  },
-  {
     name: "Sorting Visualizer",
-    description:
-      "Welcome to the Sorting Algorithm Visualizer, a powerful tool designed to showcase the inner workings of various sorting algorithms in real-time! This app offers an immersive experience that brings the complexities of sorting to life before your eyes. With the Sorting Algorithm Visualizer, users can explore a diverse range of sorting methods, including QuickSort, MergeSort, HeapSort, BubbleSort, and many more.",
-    stack: ["C++", "Qt", "GUI", "Algorithms"],
+    earlier: true,
+    pitch: "A desktop app that animates sorting algorithms in real time.",
+    highlights: [
+      "Visualizes Bubble, Selection, Insertion, Merge and Quick Sort step by step.",
+      "Qt GUI written in C++.",
+    ],
+    stack: ["C++", "Qt"],
     sourceCode: "https://github.com/kerBiy/sorting-visualizer",
   },
 ];
 
 export const skills = [
-  "HTML",
-  "CSS",
-  "TailwindCSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "React Native",
-  "Redux",
-  "Node",
-  "Express",
-  "MongoDB",
-  "Git",
-  "Docker",
-  "Postman",
-  "Github",
-  "C/C++",
-  "Assembly",
-  "Qt",
-  "Java",
-  "Spring Boot",
-  "SQL",
-  "Python",
-  "PyGame",
-  "VS Code",
-  "Vim",
+  {
+    category: "Programming Languages",
+    items: ["Java", "TypeScript", "JavaScript", "SQL", "Python", "C++", "Bash", "HTML/CSS"],
+  },
+  {
+    category: "Frameworks & Libraries",
+    items: ["Spring Boot", "Hibernate/JPA", "React", "Redux Toolkit", "Node.js", "FastAPI", "Tailwind"],
+  },
+  {
+    category: "Data & Messaging",
+    items: ["PostgreSQL", "Kafka", "MongoDB", "Liquibase", "RESTful APIs", "JWT"],
+  },
+  {
+    category: "Testing & DevOps",
+    items: ["JUnit", "Mockito", "Testcontainers", "WireMock", "Jest", "Docker", "GitHub Actions", "Gradle", "Git"],
+  },
+  {
+    category: "Languages",
+    items: ["Romanian (native)", "English (C1)"],
+  },
 ];
 
 export const contact = {
   email: "alexandrubalta222@gmail.com",
+  location: "Cluj-Napoca, Romania",
+  availability: "Available for full-time backend or full-stack roles, on-site or hybrid in Cluj-Napoca, or remote across Europe.",
 };

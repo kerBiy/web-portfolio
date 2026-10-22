@@ -1,4 +1,30 @@
 .contact {
   flex-direction: column;
+  gap: var(--margin-large);
   padding-top: var(--padding-large);
+  text-align: center;
+}
+
+.contact__text {
+  max-width: var(--max-description-width);
+}
+
+.contact .btn--outline {
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
+.contact__social {
+  gap: 1.5em;
+}
+
+.contact__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-weight: var(--fw-semi-bold);
+}
+
+.contact__location {
+  font-size: var(--fs-small);
 }

@@ -1,10 +1,8 @@
-.project {
-  border-radius: var(--border-radius-regular);
-  padding: var(--padding-medium);
-
-  margin: 0 auto;
-  text-align: center;
-  box-shadow: var(--shadow);
+.card.project {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
   transition: transform 0.2s linear;
 }
 
@@ -12,24 +10,77 @@
   transform: translateY(-7px);
 }
 
-.project__description {
-  margin-top: var(--margin-regular);
+.project__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.project__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-small);
+  padding: var(--padding-medium);
+  flex: 1;
+}
+
+.project__badge {
+  font-size: var(--fs-extra-small);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-primary);
+}
+
+.project__pitch {
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-fg-alt);
 }
 
 .project__stack {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-block: var(--margin-medium);
+  gap: 0.5em;
+  margin-top: auto;
+  padding-top: var(--margin-extra-small);
 }
 
 .project__stack-item {
-  margin: var(--margin-extra-small);
+  padding: 0.2em 0.7em;
+  border-radius: 999px;
+  border: 1px solid var(--clr-border);
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-extra-small);
   color: var(--clr-fg-alt);
 }
 
-.project .link--icon {
-  margin-left: var(--margin-extra-small);
+.project__links {
+  display: flex;
+  gap: 1.25em;
+}
+
+.project__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-weight: var(--fw-semi-bold);
+}
+
+/* Main projects: image beside text on wide screens */
+.project--featured {
+  outline: 2px solid var(--clr-primary);
+}
+
+@media (min-width: 900px) {
+  .projects__grid--main .project {
+    flex-direction: row;
+  }
+
+  .projects__grid--main .project__image {
+    width: 55%;
+    aspect-ratio: auto;
+  }
 }
