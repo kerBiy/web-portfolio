@@ -19,8 +19,7 @@
 
 @media (max-width: 600px) {
   .nav__list {
-    background-color: black;
-    opacity: var(--opacity-menu);
+    background-color: rgba(0, 0, 0, var(--opacity-menu));
 
     display: none;
     flex-direction: column;

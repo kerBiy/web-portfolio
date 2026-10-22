@@ -6,7 +6,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 import { ThemeContext } from "../../contexts/theme";
-import { projects, skills, contact } from "../../data";
+import { experience, projects, skills, contact } from "../../data";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -29,9 +29,22 @@ const Navbar = () => {
   return (
     <nav className="center nav">
       <ul
+        id="nav-list"
         style={{ display: showNavList ? "flex" : null }}
         className="nav__list"
       >
+        {experience.length ? (
+          <li className="nav__list-item">
+            <a
+              href="#experience"
+              onClick={toggleNavList}
+              className="link link--nav"
+            >
+              Experience
+            </a>
+          </li>
+        ) : null}
+
         {projects.length ? (
           <li className="nav__list-item">
             <a
@@ -73,7 +86,7 @@ const Navbar = () => {
         type="button"
         onClick={toggleTheme}
         className="btn btn--icon nav__theme"
-        aria-label="toggle theme"
+        aria-label={`Switch to ${themeName === "dark" ? "light" : "dark"} theme`}
       >
         {themeName === "dark" ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
       </button>
@@ -82,7 +95,9 @@ const Navbar = () => {
         type="button"
         onClick={toggleNavList}
         className="btn btn--icon nav__hamburger"
-        aria-label="toggle navigation"
+        aria-label={showNavList ? "Close menu" : "Open menu"}
+        aria-expanded={showNavList}
+        aria-controls="nav-list"
       >
         {showNavList ? <CloseIcon /> : <MenuIcon />}
       </button>

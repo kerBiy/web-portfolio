@@ -1,5 +1,7 @@
 .scroll-top {
   position: fixed;
+  z-index: 1;
+  color: var(--clr-fg);
   bottom: 2em;
   right: 4em;
   background-color: transparent;

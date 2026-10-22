@@ -11,8 +11,9 @@
   --clr-bg-alt: #fcfcfc;
   --clr-fg: #555;
   --clr-fg-alt: #444;
-  --clr-primary: #516dd3;
-  --clr-nav-item: #cccccc;
+  --clr-primary: #3f59bd;
+  --clr-nav-item: #f0f0f0;
+  --clr-border: #c9ced6;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -29,7 +30,8 @@
   --clr-fg: #bdbddd;
   --clr-fg-alt: #cdcdff;
   --clr-primary: #90a0d9;
-  --clr-nav-item: #bdbddd;
+  --clr-nav-item: #e4e4f5;
+  --clr-border: #4a5078;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -101,7 +103,7 @@
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   border-radius: var(--border-radius-small);
   padding: 0.8em 1.4em;
   font-weight: var(--fw-semi-bold);
@@ -178,6 +180,46 @@
   .section {
     margin-top: var(--margin-extra-large);
   }
+
+  .card,
+  .project__body {
+    padding: 1.25em;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--clr-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.card {
+  border-radius: var(--border-radius-regular);
+  padding: var(--padding-medium);
+  background: var(--clr-bg-alt);
+  box-shadow: var(--shadow);
+}
+
+.bullets {
+  display: grid;
+  gap: 0.4em;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 1.1em;
+}
+
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 50%;
+  background: var(--clr-primary);
 }
 
 /* Animations */
@@ -192,4 +234,12 @@
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

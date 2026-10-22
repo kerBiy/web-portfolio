@@ -8,6 +8,7 @@
 
 .logo {
   font-size: var(--fs-logo);
+  color: var(--clr-fg-alt);
 }
 
 @media (max-width: 600px) {
