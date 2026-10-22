@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import {
   Header,
-  About,
+  Hero,
   Experience,
   Projects,
   Skills,
@@ -39,7 +39,7 @@ const App = () => {
       <Header />
 
       <main>
-        <About />
+        <Hero />
         <Experience />
         <Projects />
         <Skills />

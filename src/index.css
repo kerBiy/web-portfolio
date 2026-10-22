@@ -54,7 +54,7 @@
   --space-7: 2rem;
   --space-8: 2.5rem;
   --space-9: 3rem;
-  --space-10: 4.5rem;
+  --space-10: 4rem;
 
   --gutter: clamp(1.25rem, 0.229rem + 4.19vw, 4rem);
   --gap-col: 1.5rem;

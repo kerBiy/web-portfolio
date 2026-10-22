@@ -1,0 +1,175 @@
+.hero {
+  padding: var(--space-10) var(--gutter) 0;
+}
+
+.hero__name {
+  font-family: var(--ff-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-display);
+  line-height: 0.9;
+  letter-spacing: var(--ls-display);
+}
+
+/* Each line is its own mask; the word rises into it once on load. */
+.hero__line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.055em;
+}
+
+.hero__line--end {
+  text-align: right;
+}
+
+.hero__word {
+  display: block;
+  animation: hero-line 1.1s var(--ease-in-out) both;
+}
+
+.hero__word--1 {
+  animation-delay: 0.15s;
+}
+
+.hero__word--2 {
+  animation-delay: 0.27s;
+}
+
+.hero__rule {
+  height: 1px;
+  margin-top: var(--space-6);
+  background: var(--ink);
+  transform-origin: 0 50%;
+  animation: hero-rule 1.2s var(--ease-in-out) 0.6s both;
+}
+
+.hero__info {
+  margin-top: var(--space-7);
+  align-items: start;
+  animation: hero-fade 0.9s var(--ease-out) 1s both;
+}
+
+.hero__role {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.hero__role-title {
+  font-weight: var(--fw-semibold);
+}
+
+.hero__location {
+  color: var(--muted);
+}
+
+.hero__bio {
+  grid-column: 5 / span 5;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+}
+
+.hero__cta {
+  grid-column: 11 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+
+.hero__more {
+  height: var(--control);
+  padding: 0 var(--space-1);
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-sm);
+}
+
+@keyframes hero-line {
+  from {
+    transform: translateY(108%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes hero-rule {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Between the frames: the CTA drops under the bio instead of squeezing into two columns. */
+@media (max-width: 1100px) {
+  .hero__role {
+    grid-column: span 4;
+  }
+
+  .hero__bio {
+    grid-column: 5 / span 8;
+  }
+
+  .hero__cta {
+    grid-column: 5 / span 8;
+    margin-top: var(--space-6);
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: var(--space-9);
+  }
+
+  .hero__rule {
+    margin-top: var(--space-4);
+  }
+
+  .hero__info {
+    margin-top: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .hero__role {
+    gap: 2px;
+  }
+
+  .hero__bio {
+    line-height: var(--lh-body);
+  }
+
+  .hero__cta {
+    margin-top: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-1);
+  }
+
+  .hero__more {
+    height: var(--btn-height-sm);
+    justify-content: center;
+    font-size: 1rem;
+  }
+}
