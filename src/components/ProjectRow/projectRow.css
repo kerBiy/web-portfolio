@@ -1,0 +1,107 @@
+.project {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap-col);
+  align-items: center;
+}
+
+.project__frame {
+  grid-row: 1;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--r-frame);
+  overflow: hidden;
+  background: var(--card);
+}
+
+.project--left .project__frame {
+  grid-column: 1 / span 6;
+}
+
+.project--right .project__frame {
+  grid-column: 7 / span 6;
+}
+
+.project__inner {
+  width: 100%;
+  height: 100%;
+}
+
+.project__shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-standard);
+}
+
+.project:hover .project__shot {
+  transform: scale(1.02);
+}
+
+.project__text {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project--left .project__text {
+  grid-column: 8 / span 5;
+}
+
+.project--right .project__text {
+  grid-column: 1 / span 5;
+}
+
+.project__name {
+  font-family: var(--ff-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-h3);
+  line-height: 1.02;
+  letter-spacing: var(--ls-title);
+}
+
+.project__pitch {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--muted);
+}
+
+.project__stack {
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.project__links {
+  padding-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project__live {
+  gap: 6px;
+}
+
+@media (max-width: 760px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-5);
+  }
+
+  .project__text {
+    gap: 10px;
+  }
+
+  .project__name {
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+  }
+
+  .project__links .btn {
+    padding: 0 var(--space-5);
+    font-size: 1rem;
+  }
+}

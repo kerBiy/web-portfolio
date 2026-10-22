@@ -1,33 +1,35 @@
-import ProjectContainer from "../ProjectContainer/ProjectContainer.jsx";
-import { projects } from "../../data";
+import ProjectRow from "../ProjectRow/ProjectRow.jsx";
+import { about, projects } from "../../data";
 
 import "./projects.css";
 
 const Projects = () => {
   if (!projects.length) return null;
-
-  const main = projects.filter((p) => !p.earlier);
-  const earlier = projects.filter((p) => p.earlier);
+  const { github } = about.social;
 
   return (
-    <section id="projects" className="section projects fade-in">
-      <h2 className="section__title">Projects</h2>
+    <section id="projects" className="projects">
+      <div className="projects__head">
+        <h2 className="section-title" data-rv="title">
+          <span data-rv-inner>Projects</span>
+        </h2>
+        {github && (
+          <a href={github} className="lnk projects__more projects__more--top" data-rv="up">
+            More on GitHub
+          </a>
+        )}
+      </div>
 
-      <ul className="projects__grid projects__grid--main">
-        {main.map((project) => (
-          <ProjectContainer key={project.name} project={project} />
+      <div className="projects__list">
+        {projects.map((project, i) => (
+          <ProjectRow key={project.name} project={project} side={i % 2 ? "right" : "left"} />
         ))}
-      </ul>
+      </div>
 
-      {earlier.length > 0 && (
-        <>
-          <h3 className="projects__subtitle">Earlier projects</h3>
-          <ul className="projects__grid projects__grid--compact">
-            {earlier.map((project) => (
-              <ProjectContainer key={project.name} project={project} />
-            ))}
-          </ul>
-        </>
+      {github && (
+        <a href={github} className="lnk projects__more projects__more--bottom" data-rv="up">
+          More on GitHub
+        </a>
       )}
     </section>
   );

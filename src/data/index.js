@@ -41,7 +41,6 @@ export const education = [
 export const projects = [
   {
     name: "Crate — Letterboxd for Albums",
-    featured: true,
     pitch: "Rate and review albums with friends, built as event-driven microservices.",
     highlights: [
       "React frontend, a Spring Cloud Gateway with JWT auth, and three Spring Boot microservices with isolated PostgreSQL databases.",
@@ -50,13 +49,14 @@ export const projects = [
     ],
     stack: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "React", "TypeScript", "Docker"],
     sourceCode: "https://github.com/kerBiy/crate",
-    // TODO(alex): add the Crate live demo URL here; the "Live demo" link appears once it's set.
+    // TODO(alex): add the Crate live demo URL here; the "Live site" button appears once it's set.
     livePreview: "",
     image: {
       src: `${process.env.PUBLIC_URL}/img/projects/crate.jpg`,
       alt: "Crate album page for Kid A by Radiohead, showing the average rating, a rating histogram and friends' reviews",
       width: 1200,
       height: 750,
+      position: "top left",
     },
   },
   {
@@ -74,11 +74,11 @@ export const projects = [
       alt: "SNN Brain Explorer Interactive Lab showing pool1 spike-timing maps, mean latency per channel and a playback slider",
       width: 1200,
       height: 649,
+      position: "top left",
     },
   },
   {
     name: "Real-Time Messaging Platform",
-    earlier: true,
     pitch: "A responsive chat app with real-time messaging.",
     highlights: [
       "Instant messaging between users over Socket.IO.",
@@ -86,10 +86,28 @@ export const projects = [
     ],
     stack: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "Tailwind"],
     sourceCode: "https://github.com/kerBiy/simple-chat",
+    image: {
+      src: `${process.env.PUBLIC_URL}/img/projects/simple-chat.jpg`,
+      alt: "Real-time chat interface with a contacts sidebar and an open conversation",
+      width: 1600,
+      height: 865,
+      position: "top left",
+    },
+  },
+  {
+    name: "Job Finder",
+    pitch: "A cross-platform mobile app using React Native, enabling users to search for jobs, view details.",
+    stack: ["React Native", "Expo", "JavaScript"],
+    sourceCode: "https://github.com/kerBiy/job-finder",
+    image: {
+      src: `${process.env.PUBLIC_URL}/img/projects/job-finder-cover.jpg`,
+      alt: "Job Finder home screen and job detail screen on two phones",
+      width: 1600,
+      height: 1000,
+    },
   },
   {
     name: "Sorting Visualizer",
-    earlier: true,
     pitch: "A desktop app that animates sorting algorithms in real time.",
     highlights: [
       "Visualizes Bubble, Selection, Insertion, Merge and Quick Sort step by step.",
@@ -97,6 +115,25 @@ export const projects = [
     ],
     stack: ["C++", "Qt"],
     sourceCode: "https://github.com/kerBiy/sorting-visualizer",
+    // TODO(alex): replace the placeholder with a real screenshot.
+    image: {
+      src: `${process.env.PUBLIC_URL}/img/projects/sorting-placeholder.jpg`,
+      alt: "Placeholder image, a screenshot is still to come",
+      width: 1600,
+      height: 1000,
+    },
+  },
+  {
+    name: "Space Dodge",
+    pitch: "A classic game made with PyGame where you dodge the falling asteroids.",
+    stack: ["Python", "Pygame"],
+    sourceCode: "https://github.com/kerBiy/space-dodge",
+    image: {
+      src: `${process.env.PUBLIC_URL}/img/projects/space-dodge.jpg`,
+      alt: "Space Dodge gameplay: an astronaut dodging falling asteroids",
+      width: 1020,
+      height: 633,
+    },
   },
 ];
 
