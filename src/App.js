@@ -1,5 +1,4 @@
-import { useEffect, useContext } from "react";
-import { ThemeContext } from "./contexts/theme.jsx";
+import { useEffect } from "react";
 
 import {
   Header,
@@ -12,11 +11,7 @@ import {
   Footer,
 } from "./components";
 
-import "./App.css";
-
 const App = () => {
-  const [{ themeName }] = useContext(ThemeContext);
-
   useEffect(() => {
     const fadeInElements = document.querySelectorAll(".fade-in");
 
@@ -40,7 +35,7 @@ const App = () => {
   }, []);
 
   return (
-    <div id="top" className={`${themeName} app`}>
+    <div id="top" className="app">
       <Header />
 
       <main>
