@@ -149,6 +149,7 @@
     margin-top: var(--space-6);
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: var(--space-6);
   }
 
