@@ -1,6 +1,8 @@
 # Web Portfolio
 
-As a passionate software developer, I've crafted this digital space to showcase my skills, projects, and achievements. Explore my diverse range of projects, from innovative designs to impactful campaigns. Each piece demonstrates my dedication to quality, attention to detail, and ability to deliver results that exceed expectations.
+Personal site of Alexandru Balta, Software Engineer (Full-Stack · Java & React). It covers my experience at 8x8, my projects (Crate, SNN Brain Explorer) and my skills, and has a link to download my CV.
+
+Built with React (Create React App) and vanilla CSS, and deployed to GitHub Pages with `npm run deploy`.
 
 ## Live Website
 
@@ -40,4 +42,10 @@ Start the server
 
 ```bash
   npm start
+```
+
+Deploy to GitHub Pages
+
+```bash
+  npm run deploy
 ```
