@@ -1,36 +1,48 @@
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
 import { about, contact } from "../../data";
+import { DownloadIcon, GitHubIcon, LinkedInIcon } from "../Icons/Icons.jsx";
 import "./contact.css";
 
 const Contact = () => {
   if (!contact.email) return null;
-  const { social } = about;
+  const { social, resume } = about;
 
   return (
-    <section className="section contact center fade-in" id="contact">
-      <h2 className="section__title">Contact</h2>
-      {contact.availability && <p className="contact__text">{contact.availability}</p>}
+    <section id="contact" className="contact">
+      <h2 className="section-title" data-rv="title">
+        <span data-rv-inner>Contact</span>
+      </h2>
 
-      <a href={`mailto:${contact.email}`} className="btn btn--outline">
+      <a href={`mailto:${contact.email}`} className="lnk contact__email" data-rv="up">
         {contact.email}
       </a>
 
-      <div className="contact__social center">
-        {social.linkedin && (
-          <a href={social.linkedin} className="link link--icon contact__link">
-            <LinkedInIcon aria-hidden="true" /> LinkedIn
-          </a>
-        )}
-        {social.github && (
-          <a href={social.github} className="link link--icon contact__link">
-            <GitHubIcon aria-hidden="true" /> GitHub
-          </a>
-        )}
-      </div>
+      <div className="contact__row grid" data-rv="up">
+        <div className="contact__text">
+          {contact.availability && <p className="contact__availability">{contact.availability}</p>}
+          {contact.location && <p className="contact__location">{contact.location}</p>}
+        </div>
 
-      {contact.location && <p className="contact__location">{contact.location}</p>}
+        <div className="contact__actions">
+          {social.linkedin && (
+            <a href={social.linkedin} className="btn btn--secondary">
+              <LinkedInIcon />
+              LinkedIn
+            </a>
+          )}
+          {social.github && (
+            <a href={social.github} className="btn btn--secondary">
+              <GitHubIcon />
+              GitHub
+            </a>
+          )}
+          {resume && (
+            <a href={resume} download className="btn btn--primary contact__cv">
+              <DownloadIcon />
+              Download CV
+            </a>
+          )}
+        </div>
+      </div>
     </section>
   );
 };

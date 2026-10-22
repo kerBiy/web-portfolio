@@ -7,7 +7,6 @@ import {
   Projects,
   Skills,
   Contact,
-  ScrollToTop,
   Footer,
 } from "./components";
 
@@ -46,7 +45,6 @@ const App = () => {
         <Contact />
       </main>
 
-      <ScrollToTop />
       <Footer />
     </div>
   );
