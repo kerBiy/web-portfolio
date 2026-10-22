@@ -10,6 +10,7 @@
   --accent: #2b44e0;
   --accent-hover: #2238c2;
   --on-accent: #ffffff;
+  --nav-material: rgba(236, 238, 240, 0.72);
   --shadow-ring: inset 0 0 0 1px var(--line);
   --shadow-ring-hover: inset 0 0 0 1.5px var(--ink);
   color-scheme: light;
@@ -61,6 +62,7 @@
   --gap-col: 1.5rem;
   --max-width: 90rem;
   --header-height: clamp(4rem, 3.814rem + 0.762vw, 4.5rem);
+  --nav-fade: 1rem;
   --section-gap: clamp(6rem, 4.514rem + 6.1vw, 10rem);
   --section-gap-sm: clamp(6rem, 5.443rem + 2.286vw, 7.5rem);
   --section-gap-projects: clamp(7rem, 5.886rem + 4.571vw, 10rem);
@@ -94,6 +96,7 @@
     --accent: #8593ff;
     --accent-hover: #a3adff;
     --on-accent: #16181b;
+    --nav-material: rgba(22, 24, 27, 0.72);
     color-scheme: dark;
   }
 }
@@ -109,6 +112,7 @@
   --accent: #8593ff;
   --accent-hover: #a3adff;
   --on-accent: #16181b;
+  --nav-material: rgba(22, 24, 27, 0.72);
   color-scheme: dark;
 }
 
@@ -130,10 +134,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
   -webkit-text-size-adjust: 100%;
 }
 
 body {
+  overflow-x: clip;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--ff-body);

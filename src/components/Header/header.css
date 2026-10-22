@@ -1,10 +1,53 @@
+/* Sticky bar. At the top it is invisible chrome over the hero; as content
+   scrolls under it, a translucent material fades in 1:1 with scroll (--nav-m,
+   0 to 1, set by Header) and dissolves at its lower edge instead of a hard line. */
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   height: var(--header-height);
   padding: 0 var(--gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-6);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
+  height: calc(100% + var(--nav-fade));
+  background: var(--nav-material);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--nav-fade)), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - var(--nav-fade)), transparent);
+  opacity: var(--nav-m, 0);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .header::before {
+    background: var(--bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .header::before {
+    background: var(--bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+    height: 100%;
+    border-bottom: 1px solid var(--ink);
+  }
 }
 
 .header__logo {

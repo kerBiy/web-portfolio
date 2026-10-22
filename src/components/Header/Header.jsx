@@ -32,6 +32,26 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const triggerRef = useRef(null);
   const sheetRef = useRef(null);
+  const headerRef = useRef(null);
+
+  // The material tracks scroll 1:1 over the first 48px, so it reverses exactly on the way back.
+  useEffect(() => {
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const m = Math.min(1, Math.max(0, window.scrollY / 48));
+      headerRef.current?.style.setProperty("--nav-m", m.toFixed(3));
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -76,7 +96,7 @@ const Header = () => {
   const close = () => setOpen(false);
 
   return (
-    <header className="header">
+    <header ref={headerRef} className="header">
       <a href="#top" className="header__logo" aria-label="Alexandru Balta, home">
         AB
       </a>
