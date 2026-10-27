@@ -60,12 +60,13 @@ export const projects = [
     sourceCode: "https://github.com/kerBiy/crate",
     // TODO(alex): add the Crate live demo URL here; the "Live site" button appears once it's set.
     livePreview: "",
+    frame: ["#3b2112", "#c27a32"],
     image: {
-      src: `${process.env.PUBLIC_URL}/img/projects/crate.jpg`,
-      alt: "Crate album page for Kid A by Radiohead, showing the average rating, a rating histogram and friends' reviews",
-      width: 1200,
-      height: 750,
-      position: "top left",
+      src: `${process.env.PUBLIC_URL}/img/projects/crate-1200.webp`,
+      srcSet: `${process.env.PUBLIC_URL}/img/projects/crate-1200.webp 1200w, ${process.env.PUBLIC_URL}/img/projects/crate-2400.webp 2400w`,
+      alt: "Crate album page for Kid A by Radiohead, with the cover on a vinyl record, the user's star rating and a rating histogram",
+      width: 2400,
+      height: 1800,
     },
   },
   {
@@ -79,12 +80,13 @@ export const projects = [
     ],
     stack: ["React", "FastAPI", "Python", "C++", "OpenAI API"],
     sourceCode: "https://github.com/kerBiy/snn-brain-explorer",
+    frame: ["#17133a", "#5a3db3"],
     image: {
-      src: `${process.env.PUBLIC_URL}/img/projects/snn-brain-explorer.jpg`,
+      src: `${process.env.PUBLIC_URL}/img/projects/snn-brain-explorer-700.webp`,
+      srcSet: `${process.env.PUBLIC_URL}/img/projects/snn-brain-explorer-700.webp 700w, ${process.env.PUBLIC_URL}/img/projects/snn-brain-explorer-1400.webp 1400w`,
       alt: "SNN Brain Explorer Interactive Lab showing pool1 spike-timing maps, mean latency per channel and a playback slider",
-      width: 1200,
-      height: 649,
-      position: "top left",
+      width: 1400,
+      height: 1050,
     },
   },
   {
