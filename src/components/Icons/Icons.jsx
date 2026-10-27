@@ -71,3 +71,15 @@ export const ArrowUpIcon = () => (
     <path d="M12 19V5M6 11l6-6 6 6" />
   </Icon>
 );
+
+export const PauseIcon = () => (
+  <Icon size={14} strokeWidth={2.4}>
+    <path d="M8 5v14M16 5v14" />
+  </Icon>
+);
+
+export const PlayIcon = () => (
+  <Icon size={14} strokeWidth={2}>
+    <path d="M7 4.5v15l12-7.5z" />
+  </Icon>
+);

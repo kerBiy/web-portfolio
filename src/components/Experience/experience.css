@@ -1,4 +1,4 @@
-/* Title on the left, content on the right; shared with Skills. */
+/* Title on the left, content on the right. Skills reuses only the section padding. */
 .split {
   padding: var(--section-gap) var(--gutter) 0;
 }
