@@ -37,33 +37,38 @@ const si = (icon) => (props) => (
   </svg>
 );
 
+// [icon, light, dark]: the brand colour, nudged darker (light theme) or lighter (dark theme)
+// only where it falls under 3:1 on the pill. Black brands use the text colour in dark.
+const logo = (icon, light = `#${icon.hex}`, dark = light) => [si(icon), light, dark];
+const INK = "var(--ink)";
+
 // Official logos: Simple Icons, plus Devicon for Java. Skills missing here show the name only.
 const ICONS = {
-  Java: [JavaIcon],
-  TypeScript: [si(siTypescript)],
-  JavaScript: [si(siJavascript)],
-  Python: [si(siPython)],
-  "C++": [si(siCplusplus)],
-  Bash: [si(siGnubash)],
-  "HTML/CSS": [si(siHtml5), si(siCss)],
-  "Spring Boot": [si(siSpringboot)],
-  "Hibernate/JPA": [si(siHibernate)],
-  React: [si(siReact)],
-  "Redux Toolkit": [si(siRedux)],
-  "Node.js": [si(siNodedotjs)],
-  FastAPI: [si(siFastapi)],
-  Tailwind: [si(siTailwindcss)],
-  PostgreSQL: [si(siPostgresql)],
-  Kafka: [si(siApachekafka)],
-  MongoDB: [si(siMongodb)],
-  Liquibase: [si(siLiquibase)],
-  JWT: [si(siJsonwebtokens)],
-  JUnit: [si(siJunit5)],
-  Jest: [si(siJest)],
-  Docker: [si(siDocker)],
-  "GitHub Actions": [si(siGithubactions)],
-  Gradle: [si(siGradle)],
-  Git: [si(siGit)],
+  Java: [[JavaIcon, "#EA2D2E", "#EA2D2E"]],
+  TypeScript: [logo(siTypescript)],
+  JavaScript: [logo(siJavascript, "#A39314", "#F7DF1E")],
+  Python: [logo(siPython)],
+  "C++": [logo(siCplusplus, "#00599C", "#2974AC")],
+  Bash: [logo(siGnubash, "#4CA724", "#4EAA25")],
+  "HTML/CSS": [logo(siHtml5), logo(siCss, "#663399", "#855CAD")],
+  "Spring Boot": [logo(siSpringboot, "#63A339", "#6DB33F")],
+  "Hibernate/JPA": [logo(siHibernate, "#59666C", "#657176")],
+  React: [logo(siReact, "#469DB5", "#61DAFB")],
+  "Redux Toolkit": [logo(siRedux, "#764ABC", "#825AC2")],
+  "Node.js": [logo(siNodedotjs)],
+  FastAPI: [logo(siFastapi)],
+  Tailwind: [logo(siTailwindcss, "#05A0BB", "#06B6D4")],
+  PostgreSQL: [logo(siPostgresql)],
+  Kafka: [logo(siApachekafka, "#231F20", INK)],
+  MongoDB: [logo(siMongodb)],
+  Liquibase: [logo(siLiquibase)],
+  JWT: [logo(siJsonwebtokens, "#000000", INK)],
+  JUnit: [logo(siJunit5)],
+  Jest: [logo(siJest, "#C21325", "#CB3444")],
+  Docker: [logo(siDocker)],
+  "GitHub Actions": [logo(siGithubactions)],
+  Gradle: [logo(siGradle, "#02303A", INK)],
+  Git: [logo(siGit)],
 };
 
 // The CV groups, redistributed so each row is wider than the screen: a pill never meets
@@ -80,8 +85,14 @@ const Pills = ({ items, ...props }) => (
   <ul className="marquee__half" {...props}>
     {items.map((name) => (
       <li key={name} className="pill">
-        {(ICONS[name] || []).map((Icon, i) => (
-          <Icon key={i} className="pill__icon" aria-hidden="true" focusable="false" />
+        {(ICONS[name] || []).map(([Icon, light, dark], i) => (
+          <Icon
+            key={i}
+            className="pill__icon"
+            style={{ "--logo-light": light, "--logo-dark": dark }}
+            aria-hidden="true"
+            focusable="false"
+          />
         ))}
         {name}
       </li>
