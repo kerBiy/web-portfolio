@@ -1,32 +1,44 @@
 import { ExternalIcon, GitHubIcon } from "../Icons/Icons.jsx";
 import "./projectRow.css";
 
-// Rows alternate sides; the frame wipes open from the edge that faces the text.
-const ProjectRow = ({ project, side }) => {
-  const { name, pitch, stack, sourceCode, livePreview, image } = project;
+// The screenshot sits inset in a tinted frame and runs past its bottom edge.
+const ProjectRow = ({ project, featured }) => {
+  const { name, pitch, stack, sourceCode, livePreview, image, frame } = project;
+  const tint = frame && { "--f1": frame[0], "--f2": frame[1] };
 
   return (
-    <article className={`project project--${side}`} data-row data-side={side}>
-      <div className="project__frame" data-frame>
+    <article className={`project${featured ? " project--featured" : ""}`} data-row>
+      <div className="project__frame" data-frame style={tint}>
         <div className="project__inner" data-inner>
           {image && (
             <img
               className="project__shot"
               src={image.src}
+              srcSet={image.srcSet}
+              sizes={featured ? "(min-width: 1024px) 680px, 86vw" : "(min-width: 761px) 560px, 86vw"}
               alt={image.alt}
               width={image.width}
               height={image.height}
               loading="lazy"
-              style={{ objectPosition: image.position || "center" }}
+              decoding="async"
+              style={{ objectPosition: image.position || "top center" }}
             />
           )}
         </div>
       </div>
 
-      <div className="project__text" data-text>
+      <div className="project__text" data-rv="up">
         <h3 className="project__name">{name}</h3>
         <p className="project__pitch">{pitch}</p>
-        {stack && <p className="project__stack">{stack.join(", ")}</p>}
+        {stack && (
+          <ul className="project__tags">
+            {stack.map((tag) => (
+              <li key={tag} className="project__tag">
+                {tag}
+              </li>
+            ))}
+          </ul>
+        )}
 
         <div className="project__links">
           {sourceCode && (

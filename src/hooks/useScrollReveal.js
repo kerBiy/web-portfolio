@@ -10,7 +10,6 @@ const reveal = () => {
   const vh = window.innerHeight;
   const small = window.matchMedia("(max-width: 760px)").matches;
   const radius = small ? 20 : 24;
-  const shift = small ? 20 : 32;
 
   document.querySelectorAll("[data-rv]").forEach((el) => {
     const e = easeOut(clamp01((vh - el.getBoundingClientRect().top) / (vh * 0.35)));
@@ -24,32 +23,20 @@ const reveal = () => {
   });
 
   document.querySelectorAll("[data-row]").forEach((row) => {
-    const left = row.dataset.side === "left";
     const p = clamp01((vh - row.getBoundingClientRect().top) / (vh * 0.6));
     const m = easeInOut(clamp01(p / 0.85));
-    const cut = `${((1 - m) * 100).toFixed(2)}%`;
     const frame = row.querySelector("[data-frame]");
     const inner = row.querySelector("[data-inner]");
-    const text = row.querySelector("[data-text]");
 
-    // The wipe opens from the edge that faces the text.
-    if (frame) {
-      frame.style.clipPath = left
-        ? `inset(0 0 0 ${cut} round ${radius}px)`
-        : `inset(0 ${cut} 0 0 round ${radius}px)`;
-    }
+    // The wipe opens upward from the frame's bottom edge.
+    if (frame) frame.style.clipPath = `inset(${((1 - m) * 100).toFixed(2)}% 0 0 0 round ${radius}px)`;
     if (inner) inner.style.transform = `scale(${(1 + (1 - m) * 0.12).toFixed(4)})`;
-    if (text) {
-      const t = easeOut(clamp01((p - 0.2) / 0.8));
-      text.style.opacity = t.toFixed(3);
-      text.style.transform = `translate3d(${((left ? 1 : -1) * (1 - t) * shift).toFixed(2)}px, 0, 0)`;
-    }
   });
 };
 
 const clear = () => {
   document
-    .querySelectorAll("[data-rv], [data-rv-inner], [data-frame], [data-inner], [data-text]")
+    .querySelectorAll("[data-rv], [data-rv-inner], [data-frame], [data-inner]")
     .forEach((el) => {
       el.style.opacity = "";
       el.style.transform = "";

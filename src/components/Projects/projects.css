@@ -11,9 +11,13 @@
 }
 
 .projects__list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--row-gap);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--row-gap) var(--gap-col);
+}
+
+.project--featured {
+  grid-column: 1 / -1;
 }
 
 .projects__more {
@@ -28,6 +32,10 @@
 @media (max-width: 760px) {
   .projects__head {
     margin-bottom: var(--space-8);
+  }
+
+  .projects__list {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .projects__more--top {

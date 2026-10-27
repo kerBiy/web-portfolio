@@ -22,7 +22,7 @@ const Projects = () => {
 
       <div className="projects__list">
         {projects.map((project, i) => (
-          <ProjectRow key={project.name} project={project} side={i % 2 ? "right" : "left"} />
+          <ProjectRow key={project.name} project={project} featured={i === 0} />
         ))}
       </div>
 

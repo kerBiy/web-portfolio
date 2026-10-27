@@ -329,8 +329,7 @@ button:focus-visible {
 [data-rv],
 [data-rv-inner],
 [data-frame],
-[data-inner],
-[data-text] {
+[data-inner] {
   will-change: transform, opacity;
 }
 
