@@ -206,10 +206,6 @@ export const skills = [
       "Git",
     ],
   },
-  {
-    category: "Languages",
-    items: ["Romanian (native)", "English (C1)"],
-  },
 ];
 
 export const contact = {
