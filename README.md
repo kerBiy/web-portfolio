@@ -23,7 +23,8 @@ Here is the website: [Live Demo](https://kerBiy.github.io/web-portfolio)
 - Editorial layout with Inter Tight for headings and Inter for text, responsive from phones to wide screens.
 - Light and dark themes that follow the device setting, with a toggle to override it for the current device theme.
 - Sticky header that turns translucent as content scrolls under it, and a full-screen menu on small screens.
-- Scroll-driven reveals: section titles rise out of a mask and project screenshots wipe open as you scroll, reversing on the way back.
+- Project showcase cards: each screenshot sits in a grain-textured gradient frame tinted for the project and peeks out of its bottom edge. Crate is featured, the rest sit in a two-column grid.
+- Scroll reveals: section titles rise out of a mask and project frames open from their bottom edge once they scroll into view. Only transform and opacity animate, so the reveals stay smooth and always finish.
 - Accessible by default: WCAG AA contrast, visible focus states, keyboard-friendly menu, and no motion when `prefers-reduced-motion` is set.
 
 ## Project Structure
@@ -31,11 +32,11 @@ Here is the website: [Live Demo](https://kerBiy.github.io/web-portfolio)
 - `src/data/index.js`: all content (about, experience, education, projects, skills, contact). Edit this file to update the site.
 - `src/index.css`: design tokens (colors for light and dark, type scale, spacing, radii, motion) and shared styles.
 - `src/components/`: one folder per section (Header, Hero, Experience, Projects, ProjectRow, Skills, Contact, Footer).
-- `src/hooks/useScrollReveal.js`: the scroll-driven reveal animations.
+- `src/hooks/useScrollReveal.js`: marks elements as they scroll into view; the reveal transitions live in `src/index.css`.
 - `src/contexts/theme.jsx`: theme handling.
-- `public/`: the CV (`Alexandru_Balta_Resume.pdf`) and project screenshots in `public/img/projects/`.
+- `public/`: the CV (`Alexandru_Balta_Resume.pdf`) and project screenshots in `public/img/projects/` (WebP, two sizes each, cropped to 4:3).
 
-To show a "Live site" button for a project, set its `livePreview` URL in `src/data/index.js`.
+To show a "Live site" button for a project, set its `livePreview` URL in `src/data/index.js`. A project's `frame` sets its two gradient colours.
 
 ## Run Locally
 
