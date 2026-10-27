@@ -32,7 +32,7 @@
   animation-direction: reverse;
 }
 
-.skills:hover .marquee__track,
+/* No pause on hover: the rows keep moving; the button is the way to stop them. */
 .skills:focus-within .marquee__track,
 .skills.is-paused .marquee__track {
   animation-play-state: paused;
