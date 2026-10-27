@@ -166,7 +166,8 @@ export const skills = [
       "Python",
       "C++",
       "Bash",
-      "HTML/CSS",
+      "HTML",
+      "CSS",
     ],
   },
   {
