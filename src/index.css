@@ -325,12 +325,56 @@ button:focus-visible {
   white-space: nowrap;
 }
 
-/* Scroll-driven reveals are written inline by useScrollReveal. */
-[data-rv],
-[data-rv-inner],
-[data-frame],
-[data-inner] {
-  will-change: transform, opacity;
+/* Scroll reveals: useScrollReveal adds .rv to <html> and .is-in to each element once it is
+   in view. Only transform and opacity animate. With reduced motion nothing is hidden. */
+@media (prefers-reduced-motion: no-preference) {
+  .rv [data-rv="up"] {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+  }
+
+  .rv [data-rv="title"] [data-rv-inner] {
+    transform: translate3d(0, 105%, 0);
+    transition: transform 0.8s var(--ease-out);
+  }
+
+  /* Project frames open from the bottom edge: the mask rises while the frame inside it
+     counter-moves by the same amount, so the picture stays put and the edge wipes up. */
+  .rv [data-row] [data-mask],
+  .rv [data-row] [data-frame] {
+    transition: transform 0.9s var(--ease-in-out);
+  }
+
+  .rv [data-row] [data-mask] {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  .rv [data-row] [data-frame] {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  .rv [data-row] [data-inner] {
+    transform: scale(1.12);
+    transition: transform 1.1s var(--ease-out);
+  }
+
+  /* Card text follows its own row, so it never lags behind a frame that has opened. */
+  .rv [data-row] [data-row-text] {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition: opacity 0.6s var(--ease-out) 0.25s, transform 0.6s var(--ease-out) 0.25s;
+  }
+
+  .rv .is-in[data-rv="up"],
+  .rv .is-in [data-row-text],
+  .rv .is-in [data-rv-inner],
+  .rv .is-in [data-mask],
+  .rv .is-in [data-frame],
+  .rv .is-in [data-inner] {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

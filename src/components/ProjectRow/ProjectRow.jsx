@@ -8,26 +8,28 @@ const ProjectRow = ({ project, featured }) => {
 
   return (
     <article className={`project${featured ? " project--featured" : ""}`} data-row>
-      <div className="project__frame" data-frame style={tint}>
-        <div className="project__inner" data-inner>
-          {image && (
-            <img
-              className="project__shot"
-              src={image.src}
-              srcSet={image.srcSet}
-              sizes={featured ? "(min-width: 1024px) 680px, 86vw" : "(min-width: 761px) 560px, 86vw"}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
-              loading="lazy"
-              decoding="async"
-              style={{ objectPosition: image.position || "top center" }}
-            />
-          )}
+      <div className="project__mask" data-mask>
+        <div className="project__frame" data-frame style={tint}>
+          <div className="project__inner" data-inner>
+            {image && (
+              <img
+                className="project__shot"
+                src={image.src}
+                srcSet={image.srcSet}
+                sizes={featured ? "(min-width: 1024px) 680px, 86vw" : "(min-width: 761px) 560px, 86vw"}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                loading="lazy"
+                decoding="async"
+                style={{ objectPosition: image.position || "top center" }}
+              />
+            )}
+          </div>
         </div>
       </div>
 
-      <div className="project__text" data-rv="up">
+      <div className="project__text" data-row-text>
         <h3 className="project__name">{name}</h3>
         <p className="project__pitch">{pitch}</p>
         {stack && (

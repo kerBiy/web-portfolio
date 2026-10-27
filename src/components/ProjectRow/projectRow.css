@@ -4,6 +4,11 @@
   gap: var(--space-6);
 }
 
+.project__mask {
+  border-radius: var(--r-frame);
+  overflow: hidden;
+}
+
 .project__frame {
   position: relative;
   aspect-ratio: 16 / 10;
