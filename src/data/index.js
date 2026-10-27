@@ -139,18 +139,20 @@ export const projects = [
   //     height: 1000,
   //   },
   // },
-  // {
-  //   name: "Space Dodge",
-  //   pitch: "A classic game made with PyGame where you dodge the falling asteroids.",
-  //   stack: ["Python", "Pygame"],
-  //   sourceCode: "https://github.com/kerBiy/space-dodge",
-  //   image: {
-  //     src: `${process.env.PUBLIC_URL}/img/projects/space-dodge.jpg`,
-  //     alt: "Space Dodge gameplay: an astronaut dodging falling asteroids",
-  //     width: 1020,
-  //     height: 633,
-  //   },
-  // },
+  {
+    name: "Space Dodge",
+    pitch: "A classic game made with PyGame where you dodge the falling asteroids.",
+    stack: ["Python", "Pygame"],
+    sourceCode: "https://github.com/kerBiy/space-dodge",
+    frame: ["#0f1530", "#2f5fc4"],
+    image: {
+      src: `${process.env.PUBLIC_URL}/img/projects/space-dodge-853.webp`,
+      srcSet: `${process.env.PUBLIC_URL}/img/projects/space-dodge-853.webp 853w, ${process.env.PUBLIC_URL}/img/projects/space-dodge-1706.webp 1706w`,
+      alt: "Space Dodge gameplay: a pixel-art astronaut on a grey moon surface as asteroids fall from a starry sky, with the score in the corner",
+      width: 1706,
+      height: 1280,
+    },
+  },
 ];
 
 export const skills = [
